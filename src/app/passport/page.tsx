@@ -2,7 +2,7 @@
 import { PassportCard } from "@/components/passport-card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ShieldCheck, Cpu, Zap, Trophy } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function PassportPage() {
   return (
@@ -38,26 +38,13 @@ export default function PassportPage() {
               <div className="space-y-1">
                 <h2 className="font-headline font-bold text-2xl uppercase tracking-tight">Ready to Start?</h2>
                 <p className="text-sm text-muted-foreground">
-                  Secure your spot in the flagship technical festival of IIT Madras.
+                  Secure your spot in the flagship technical festival of IIT Madras. Your digital identity is just a click away.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-               {[
-                 { icon: Cpu, label: "Digital Tracking" },
-                 { icon: Zap, label: "Instant Access" },
-                 { icon: Trophy, label: "Earn Points" }
-               ].map((feat, i) => (
-                 <div key={i} className="flex items-center gap-2 p-3 rounded-xl bg-background/50 border border-white/5">
-                   <feat.icon className="h-4 w-4 text-primary" />
-                   <span className="text-[10px] font-bold uppercase tracking-wider">{feat.label}</span>
-                 </div>
-               ))}
-            </div>
-
-            <Button size="lg" className="w-full h-16 rounded-full text-lg font-bold bg-primary hover:bg-primary/90 cyber-button shadow-lg shadow-primary/25">
-              GET PASSPORT <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="w-full h-16 rounded-full text-xl font-bold bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all hover:scale-[1.02]">
+              GET PASSPORT <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </div>
           
