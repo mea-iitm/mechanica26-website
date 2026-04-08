@@ -1,90 +1,141 @@
 
 import { Badge } from "@/components/ui/badge";
-import { Clock, MapPin } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Clock, MapPin, Calendar as CalendarIcon, ChevronRight } from "lucide-react";
 
-const schedule = [
+const scheduleData = [
   {
+    id: "day1",
     day: "Day 01",
     date: "March 15, 2026",
     events: [
-      { time: "09:00 AM", title: "Opening Ceremony", loc: "Main Auditorium", type: "Official" },
-      { time: "11:30 AM", title: "Technical Workshops", loc: "Mech Department Labs", type: "Learning" },
-      { time: "02:00 PM", title: "Design Competitions", loc: "Design Studio", type: "Compete" },
-      { time: "05:00 PM", title: "Networking Hi-Tea", loc: "Alumni Lounge", type: "Social" },
+      { time: "09:00 AM", title: "Opening Ceremony", loc: "Main Auditorium", type: "Official", desc: "Kickoff of Mechanica 2026 with keynote addresses and inaugural performance." },
+      { time: "11:30 AM", title: "Technical Workshops", loc: "Mech Department Labs", type: "Learning", desc: "Hands-on sessions covering advanced robotics and sustainable engineering." },
+      { time: "02:00 PM", title: "Design Competitions", loc: "Design Studio", type: "Compete", desc: "The CAD and simulation challenges begin for pre-registered teams." },
+      { time: "05:00 PM", title: "Networking Hi-Tea", loc: "Alumni Lounge", type: "Social", desc: "An informal session to connect with professors and industry experts." },
     ]
   },
   {
+    id: "day2",
     day: "Day 02",
     date: "March 16, 2026",
     events: [
-      { time: "10:00 AM", title: "Industry Summit", loc: "Convention Center", type: "Summit" },
-      { time: "01:30 PM", title: "Robotics Challenges", loc: "Tech Arena", type: "Compete" },
-      { time: "04:00 PM", title: "Networking Sessions", loc: "Lobby Hall", type: "Social" },
+      { time: "10:00 AM", title: "Industry Summit", loc: "Convention Center", type: "Summit", desc: "Leaders from top engineering firms discuss the future of Industry 5.0." },
+      { time: "01:30 PM", title: "Robotics Challenges", loc: "Tech Arena", type: "Compete", desc: "The main arena event: robot battles and navigation challenges." },
+      { time: "04:00 PM", title: "Networking Sessions", loc: "Lobby Hall", type: "Social", desc: "One-on-one sessions with recruitment teams from sponsoring partners." },
     ]
   },
   {
+    id: "day3",
     day: "Day 03",
     date: "March 17, 2026",
     events: [
-      { time: "09:30 AM", title: "Final Competitions", loc: "Tech Arena", type: "Compete" },
-      { time: "02:00 PM", title: "Awards Ceremony", loc: "Main Auditorium", type: "Official" },
-      { time: "05:00 PM", title: "Closing Event", loc: "Garden Stage", type: "Official" },
+      { time: "09:30 AM", title: "Final Competitions", loc: "Tech Arena", type: "Compete", desc: "The top teams face off in the grand finale of the technical challenges." },
+      { time: "02:00 PM", title: "Awards Ceremony", loc: "Main Auditorium", type: "Official", desc: "Recognizing the winners of Mechanica 2026 competitions." },
+      { time: "05:00 PM", title: "Closing Event", loc: "Garden Stage", type: "Official", desc: "The festival concludes with a celebratory cultural night." },
     ]
   }
 ];
 
 export default function SchedulePage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <section className="max-w-4xl mx-auto text-center mb-20 space-y-4">
-        <h1 className="font-headline font-bold text-4xl md:text-6xl">Festival <span className="text-primary">Schedule</span></h1>
-        <p className="text-muted-foreground text-lg">Your roadmap to MECHANICA 2026.</p>
+    <div className="container mx-auto px-4 py-12 max-w-5xl">
+      <section className="text-center mb-16 space-y-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-4">
+          <CalendarIcon className="h-3 w-3" />
+          Event Roadmap
+        </div>
+        <h1 className="font-headline font-bold text-4xl md:text-6xl tracking-tight">
+          Festival <span className="text-primary">Schedule</span>
+        </h1>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Planning your Mechanica experience is easy. Browse the full itinerary for all three days and mark your favorite sessions.
+        </p>
       </section>
 
-      <div className="max-w-4xl mx-auto space-y-24">
-        {schedule.map((day, dIdx) => (
-          <div key={dIdx} className="space-y-12">
-            <div className="flex flex-col items-center gap-2">
-              <Badge className="px-6 py-1 bg-primary text-white rounded-full font-headline">{day.day}</Badge>
-              <h2 className="text-2xl font-bold">{day.date}</h2>
+      <Tabs defaultValue="day1" className="space-y-12">
+        <div className="flex justify-center">
+          <TabsList className="grid w-full max-w-md grid-cols-3 h-14 p-1 glass-card bg-muted/30">
+            {scheduleData.map((day) => (
+              <TabsTrigger 
+                key={day.id} 
+                value={day.id}
+                className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-headline"
+              >
+                {day.day}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
+
+        {scheduleData.map((day) => (
+          <TabsContent 
+            key={day.id} 
+            value={day.id} 
+            className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500"
+          >
+            <div className="flex items-center justify-between border-b pb-4 mb-8">
+              <h2 className="text-2xl font-bold font-headline">{day.date}</h2>
+              <Badge variant="outline" className="text-muted-foreground">{day.events.length} Events Scheduled</Badge>
             </div>
 
-            <div className="relative">
-              {/* Vertical line */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" />
-              
-              <div className="space-y-12 relative">
-                {day.events.map((event, eIdx) => (
-                  <div key={eIdx} className={`flex items-center gap-8 ${eIdx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    {/* Event Card */}
-                    <div className="flex-1">
-                      <div className={`glass-card p-6 rounded-2xl space-y-3 hover:scale-[1.02] transition-transform duration-300 border-primary/10 ${eIdx % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                        <div className={`flex items-center gap-2 text-primary font-headline font-bold ${eIdx % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                          <Clock className="h-4 w-4" />
-                          {event.time}
+            <div className="grid gap-4">
+              {day.events.map((event, idx) => (
+                <Card key={idx} className="glass-card border-white/5 hover:border-primary/20 transition-all duration-300 group overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="flex flex-col md:flex-row">
+                      {/* Time Sidebar */}
+                      <div className="md:w-48 bg-muted/50 p-6 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/5 group-hover:bg-primary/5 transition-colors">
+                        <Clock className="h-5 w-5 text-primary mb-2" />
+                        <span className="font-headline font-bold text-lg">{event.time}</span>
+                      </div>
+
+                      {/* Content Area */}
+                      <div className="flex-1 p-6 space-y-4">
+                        <div className="flex flex-wrap items-start justify-between gap-4">
+                          <div className="space-y-1">
+                            <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{event.title}</h3>
+                            <div className="flex items-center text-sm text-muted-foreground">
+                              <MapPin className="h-4 w-4 mr-1 text-primary" />
+                              {event.loc}
+                            </div>
+                          </div>
+                          <Badge 
+                            variant="secondary" 
+                            className="bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-white transition-colors"
+                          >
+                            {event.type}
+                          </Badge>
                         </div>
-                        <h3 className="text-xl font-bold">{event.title}</h3>
-                        <div className={`flex items-center gap-2 text-sm text-muted-foreground ${eIdx % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                          <MapPin className="h-4 w-4" />
-                          {event.loc}
-                        </div>
-                        <Badge variant="secondary" className="mt-2">{event.type}</Badge>
+                        
+                        <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                          {event.desc}
+                        </p>
+                      </div>
+
+                      {/* Action Icon (Hidden on mobile, visible on desktop) */}
+                      <div className="hidden md:flex items-center px-6 text-muted-foreground/20 group-hover:text-primary transition-colors">
+                        <ChevronRight className="h-6 w-6" />
                       </div>
                     </div>
-
-                    {/* Timeline Node */}
-                    <div className="z-10 w-8 h-8 rounded-full border-2 border-primary bg-background flex items-center justify-center shrink-0">
-                      <div className="w-2 h-2 rounded-full bg-primary animate-ping" />
-                    </div>
-
-                    {/* Empty Space for layout */}
-                    <div className="flex-1 hidden md:block" />
-                  </div>
-                ))}
-              </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-          </div>
+          </TabsContent>
         ))}
+      </Tabs>
+      
+      {/* Legend / Quick Tip */}
+      <div className="mt-20 p-8 rounded-3xl border border-dashed border-border flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="space-y-1">
+          <h4 className="font-bold">Need a custom plan?</h4>
+          <p className="text-sm text-muted-foreground">Use our AI Passport tool to generate an itinerary based on your technical interests.</p>
+        </div>
+        <Badge variant="outline" className="px-4 py-2 cursor-pointer hover:bg-muted transition-colors">
+          Go to AI Itinerary →
+        </Badge>
       </div>
     </div>
   );
