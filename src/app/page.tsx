@@ -1,8 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { StatsSection } from "@/components/stats-section";
+import { SponsorsSection } from "@/components/sponsors-section";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Rocket, Target, Users, ArrowRight } from "lucide-react";
 
@@ -152,6 +152,9 @@ export default function Home() {
 
       {/* Stats Section */}
       <StatsSection />
+
+      {/* Sponsors Section */}
+      <SponsorsSection />
     </div>
   );
 }
