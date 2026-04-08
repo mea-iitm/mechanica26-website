@@ -18,11 +18,11 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image
             src={heroImg?.imageUrl || ''}
-            alt="Futuristic Mechanical Background"
+            alt="Futuristic Robotics Background"
             fill
             className="object-cover opacity-30 dark:opacity-40"
             priority
-            data-ai-hint="mechanical engineering robotics background"
+            data-ai-hint="robotics engineering"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
         </div>

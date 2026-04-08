@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Automobile Engineering Innovation Lab with chassis and students",
-      "imageUrl": "https://picsum.photos/seed/mechanical-lab-car/1200/800",
-      "imageHint": "mechanical engineering automobile lab"
+      "description": "Futuristic robotics and advanced mechanical systems",
+      "imageUrl": "https://picsum.photos/seed/robotics-engineering-2026/1200/800",
+      "imageHint": "robotics engineering"
     },
     {
       "id": "summit-speaker-1",
