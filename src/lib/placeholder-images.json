@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-mechanical",
+      "description": "Futuristic mechanical gears and AI visuals",
+      "imageUrl": "https://picsum.photos/seed/mech1/1200/800",
+      "imageHint": "mechanical gears robotics"
+    },
+    {
+      "id": "summit-speaker-1",
+      "description": "Innovation Summit Speaker 1",
+      "imageUrl": "https://picsum.photos/seed/speaker1/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "summit-speaker-2",
+      "description": "Innovation Summit Speaker 2",
+      "imageUrl": "https://picsum.photos/seed/speaker2/400/400",
+      "imageHint": "professional engineer"
+    },
+    {
+      "id": "summit-speaker-3",
+      "description": "Innovation Summit Speaker 3",
+      "imageUrl": "https://picsum.photos/seed/speaker3/400/400",
+      "imageHint": "tech leader"
+    },
+    {
+      "id": "event-robotics",
+      "description": "Robotics challenge event",
+      "imageUrl": "https://picsum.photos/seed/robotics/600/400",
+      "imageHint": "robot competition"
+    },
+    {
+      "id": "event-cad",
+      "description": "CAD design competition",
+      "imageUrl": "https://picsum.photos/seed/cad/600/400",
+      "imageHint": "computer engineering"
+    },
+    {
+      "id": "event-ev",
+      "description": "Electric vehicle workshop",
+      "imageUrl": "https://picsum.photos/seed/evpowertrain/600/400",
+      "imageHint": "electric car"
+    },
+    {
+      "id": "merch-tshirt",
+      "description": "Mechanica official T-shirt",
+      "imageUrl": "https://picsum.photos/seed/tshirt/600/600",
+      "imageHint": "black t-shirt"
+    },
+    {
+      "id": "merch-accessories",
+      "description": "Engineering themed accessories",
+      "imageUrl": "https://picsum.photos/seed/accessories/600/600",
+      "imageHint": "tech gadgets"
+    }
+  ]
 }
