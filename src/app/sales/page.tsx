@@ -1,16 +1,9 @@
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ShoppingBag, Ticket, Star } from "lucide-react";
-
-const passes = [
-  { title: "General Festival Pass", price: "₹499", desc: "Access to all technical events and exhibition stalls for 3 days.", icon: Ticket },
-  { title: "Workshop Access Pass", price: "₹899", desc: "Includes general access + entry to one professional workshop of your choice.", icon: Star },
-  { title: "Summit Access Pass", price: "₹1299", desc: "Premium access to the Engineering Summit + networking dinner with speakers.", icon: ShoppingBag },
-];
+import { ShoppingBag, ArrowRight } from "lucide-react";
 
 const merchandise = [
   { id: 'merch-tshirt', title: "Official Mech T-Shirt", price: "₹699", desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo." },
@@ -21,62 +14,66 @@ const merchandise = [
 export default function SalesPage() {
   return (
     <div className="container mx-auto px-4 py-12 space-y-24">
-      <section className="max-w-4xl mx-auto text-center space-y-4">
-        <h1 className="font-headline font-bold text-4xl md:text-6xl">
-          Mechanica <span className="text-primary">Store</span>
+      <section className="max-w-4xl mx-auto text-center space-y-6">
+        <Badge variant="outline" className="py-1 px-4 border-primary text-primary font-bold tracking-widest uppercase">Official Store</Badge>
+        <h1 className="font-headline font-bold text-5xl md:text-7xl tracking-tighter">
+          GEAR <span className="text-primary text-glow">UP</span>
         </h1>
-        <p className="text-muted-foreground text-lg">Get your passes and official merchandise early to avoid the rush.</p>
+        <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium">
+          Limited edition festival merchandise and essential engineer tools. Designed for those who build the future.
+        </p>
       </section>
 
-      {/* Event Passes */}
-      <section className="space-y-12">
-        <h2 className="font-headline font-bold text-3xl">Event <span className="text-primary">Passes</span></h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {passes.map((pass, i) => (
-            <div key={i} className="glass-card p-8 rounded-3xl relative overflow-hidden group border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
-               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform">
-                <pass.icon className="h-24 w-24" />
-              </div>
-              <div className="space-y-6 relative">
-                <h3 className="font-headline font-bold text-2xl">{pass.title}</h3>
-                <p className="text-muted-foreground text-sm">{pass.desc}</p>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{pass.price}</span>
-                  <span className="text-xs text-muted-foreground uppercase">/ Participant</span>
-                </div>
-                <Button className="w-full rounded-full bg-primary hover:bg-primary/90 h-12 text-lg">Buy Pass</Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Merchandise */}
+      {/* Merchandise Grid */}
        <section className="space-y-12">
-        <h2 className="font-headline font-bold text-3xl">Official <span className="text-primary">Merchandise</span></h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex items-center gap-6">
+          <h2 className="font-headline font-bold text-3xl uppercase tracking-tighter shrink-0">Official Merchandise</h2>
+          <div className="h-px w-full bg-gradient-to-r from-border to-transparent" />
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {merchandise.map((item, i) => {
             const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[i % 5];
             return (
-              <Card key={i} className="overflow-hidden glass-card group">
-                <div className="aspect-square relative">
-                  <Image src={img.imageUrl} alt={item.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <Badge className="absolute top-2 right-2 bg-accent/80 backdrop-blur-md">NEW ARRIVAL</Badge>
+              <Card key={i} className="overflow-hidden glass-card group border-white/5 relative scanline">
+                <div className="aspect-square relative overflow-hidden">
+                  <Image 
+                    src={img.imageUrl} 
+                    alt={item.title} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold">PRE-ORDER</Badge>
                 </div>
-                <CardContent className="p-6 space-y-2">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-headline font-bold text-xl">{item.title}</h3>
-                    <span className="text-primary font-bold text-lg">{item.price}</span>
+                <CardContent className="p-8 space-y-3">
+                  <div className="flex justify-between items-center">
+                    <h3 className="font-headline font-bold text-2xl tracking-tight">{item.title}</h3>
+                    <span className="text-primary font-bold text-xl">{item.price}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button variant="outline" className="w-full rounded-full border-primary/50 text-primary hover:bg-primary hover:text-white">Add to Cart</Button>
+                <CardFooter className="p-8 pt-0">
+                  <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 shadow-lg shadow-primary/20">
+                    <ShoppingBag className="mr-2 h-4 w-4" /> Add to Toolkit
+                  </Button>
                 </CardFooter>
               </Card>
             );
           })}
         </div>
+      </section>
+
+      {/* Bulk Order Banner */}
+      <section className="bg-primary/5 border border-primary/20 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[120px] rounded-full" />
+        <div className="space-y-2 relative">
+          <h3 className="font-headline font-bold text-3xl">Group Bookings?</h3>
+          <p className="text-muted-foreground">Contact us for bulk merchandise orders for your department or college.</p>
+        </div>
+        <Button variant="outline" className="rounded-full h-14 px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground group relative">
+          Contact Sales Team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Button>
       </section>
     </div>
   );

@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react";
@@ -6,17 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, Settings } from "lucide-react";
+import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Passport", href: "/passport" },
-  { name: "Summit", href: "/summit" },
-  { name: "Events & Workshops", href: "/events" },
+  { name: "Events", href: "/events" },
   { name: "Schedule", href: "/schedule" },
-  { name: "Sales", href: "/sales" },
+  { name: "Store", href: "/sales" },
 ];
 
 export function Navbar() {
@@ -25,66 +23,73 @@ export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border transition-all">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-headline font-bold">M</div>
-          <span className="font-headline font-bold text-xl tracking-tight hidden sm:inline-block">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-white/5 transition-all">
+      <div className="container mx-auto px-4 h-16 flex items-center">
+        {/* Logo Left */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-headline font-bold transition-transform group-hover:rotate-12">M</div>
+          <span className="font-headline font-bold text-xl tracking-tighter hidden sm:inline-block">
             MECHANICA <span className="text-primary">2026</span>
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === item.href ? "text-primary" : "text-muted-foreground"
-              )}
+        {/* Right Aligned Navigation Group */}
+        <div className="flex-1 flex justify-end items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "text-xs uppercase tracking-widest font-bold transition-all hover:text-primary relative group",
+                  pathname === item.href ? "text-primary" : "text-muted-foreground"
+                )}
+              >
+                {item.name}
+                <span className={cn(
+                  "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300",
+                  pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
+                )} />
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="rounded-full hover:bg-primary/10"
             >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
 
-        <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full"
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-
-          {/* Mobile Nav */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="flex flex-col gap-8 pt-12">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "text-lg font-headline font-medium transition-colors hover:text-primary",
-                    pathname === item.href ? "text-primary" : "text-muted-foreground"
-                  )}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </SheetContent>
-          </Sheet>
+            {/* Mobile Nav */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="flex flex-col gap-8 pt-20 bg-background/95 backdrop-blur-xl">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "text-2xl font-headline font-bold uppercase tracking-tighter transition-colors hover:text-primary",
+                      pathname === item.href ? "text-primary" : "text-foreground"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

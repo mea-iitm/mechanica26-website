@@ -1,60 +1,54 @@
-
 import Link from "next/link";
 import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-card/50 border-t border-border mt-20">
+    <footer className="bg-card/30 border-t border-white/5 mt-20 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="font-headline font-bold text-2xl mb-4">MECHANICA <span className="text-primary">2026</span></h3>
-            <p className="text-muted-foreground max-w-sm mb-6">
-              The flagship annual technical festival of the Mechanical Engineering Association (MEA) at IIT Madras.
-            </p>
+          <div className="col-span-1 md:col-span-2 space-y-6">
+            <div>
+              <h3 className="font-headline font-bold text-3xl tracking-tighter mb-2">MECHANICA <span className="text-primary">2026</span></h3>
+              <p className="text-muted-foreground max-w-sm">
+                Innovation meets precision at the flagship technical festival of the Mechanical Engineering Association (MEA) at IIT Madras.
+              </p>
+            </div>
             <div className="flex gap-4">
-              <Link href="#" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                <Youtube className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                <Linkedin className="h-5 w-5" />
-              </Link>
+              {[Instagram, Youtube, Facebook, Linkedin].map((Icon, i) => (
+                <Link key={i} href="#" className="p-2 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                  <Icon className="h-5 w-5" />
+                </Link>
+              ))}
             </div>
           </div>
 
           <div>
-            <h4 className="font-headline font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="/passport" className="text-muted-foreground hover:text-primary transition-colors">Passport</Link></li>
-              <li><Link href="/summit" className="text-muted-foreground hover:text-primary transition-colors">Summit</Link></li>
-              <li><Link href="/events" className="text-muted-foreground hover:text-primary transition-colors">Events & Workshops</Link></li>
-              <li><Link href="/schedule" className="text-muted-foreground hover:text-primary transition-colors">Schedule</Link></li>
+            <h4 className="font-headline font-bold uppercase tracking-widest text-sm mb-6 text-primary">Explore</h4>
+            <ul className="space-y-3">
+              <li><Link href="/passport" className="text-muted-foreground hover:text-foreground transition-colors">Passport</Link></li>
+              <li><Link href="/events" className="text-muted-foreground hover:text-foreground transition-colors">Events & Workshops</Link></li>
+              <li><Link href="/schedule" className="text-muted-foreground hover:text-foreground transition-colors">Full Schedule</Link></li>
+              <li><Link href="/sales" className="text-muted-foreground hover:text-foreground transition-colors">Merchandise</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-headline font-semibold mb-4">Get in Touch</h4>
+            <h4 className="font-headline font-bold uppercase tracking-widest text-sm mb-6 text-primary">Contact</h4>
             <div className="space-y-4">
               <div className="flex gap-3 text-muted-foreground">
-                <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>MSB, IIT Madras, Chennai</span>
+                <MapPin className="h-5 w-5 text-accent shrink-0" />
+                <span className="text-sm">MSB, IIT Madras, Chennai</span>
               </div>
               <div className="flex gap-3 text-muted-foreground">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <Link href="mailto:mea@smail.iitm.ac.in" className="hover:text-primary">mea@smail.iitm.ac.in</Link>
+                <Mail className="h-5 w-5 text-accent shrink-0" />
+                <Link href="mailto:mea@smail.iitm.ac.in" className="text-sm hover:text-foreground">mea@smail.iitm.ac.in</Link>
               </div>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
-          <p>© 2025 Mechanical Engineering Association, Indian Institute of Technology Madras. All Rights Reserved.</p>
+        <div className="border-t border-white/5 mt-12 pt-8 text-center text-muted-foreground text-xs font-medium tracking-widest uppercase">
+          <p>© 2025 Mechanical Engineering Association, IIT Madras. Engineeered for Excellence.</p>
         </div>
       </div>
     </footer>
