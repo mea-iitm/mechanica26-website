@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Futuristic mechanical engineering and racing automobiles",
-      "imageUrl": "https://picsum.photos/seed/mechanical-racing-engineering/1200/800",
-      "imageHint": "formula racing car mechanical"
+      "description": "Automobile Engineering Innovation Lab with chassis and students",
+      "imageUrl": "https://picsum.photos/seed/mechanical-lab-car/1200/800",
+      "imageHint": "mechanical engineering automobile lab"
     },
     {
       "id": "summit-speaker-1",
