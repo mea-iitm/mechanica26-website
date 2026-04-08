@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-0">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
             src={heroImg?.imageUrl || ''}
@@ -27,9 +27,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
         </div>
 
-        <div className="container mx-auto px-4 pt-20 text-center lg:text-left grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium animate-fade-in-up">
+        <div className="container mx-auto px-4 pt-20 text-center flex flex-col items-center">
+          <div className="space-y-8 max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium animate-fade-in-up mx-auto">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -46,33 +46,19 @@ export default function Home() {
               <p className="font-headline font-medium text-xl text-muted-foreground uppercase tracking-widest">
                 By the Mechanical Engineering Association
               </p>
-              <p className="text-muted-foreground text-lg max-w-xl">
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 The flagship annual technical festival of the Mechanical Engineering Association at IIT Madras. 
                 Where innovation meets precision.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:600ms]">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:600ms] justify-center">
               <Button asChild size="lg" className="rounded-full h-14 px-8 text-lg bg-primary hover:bg-primary/90">
                 <Link href="/events">Explore Events <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-8 text-lg border-primary text-primary hover:bg-primary/10">
                 <Link href="/passport">Get Your Passport</Link>
               </Button>
-            </div>
-          </div>
-
-          <div className="relative hidden lg:block animate-fade-in-up [animation-delay:800ms]">
-            <div className="relative aspect-square w-full max-w-md mx-auto">
-              <div className="absolute inset-0 border-4 border-dashed border-primary/20 rounded-full animate-[spin_20s_linear_infinite]" />
-              <div className="absolute inset-8 border border-accent/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 bg-primary/10 rounded-full flex items-center justify-center backdrop-blur-3xl">
-                  <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center">
-                    <Rocket className="h-24 w-24 text-primary animate-bounce" />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
