@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Futuristic mechanical gears and AI visuals",
-      "imageUrl": "https://picsum.photos/seed/mech1/1200/800",
-      "imageHint": "mechanical gears robotics"
+      "description": "Futuristic mechanical gears and industrial machinery",
+      "imageUrl": "https://picsum.photos/seed/industrial-gears-heavy/1200/800",
+      "imageHint": "industrial machinery gears"
     },
     {
       "id": "summit-speaker-1",
@@ -33,7 +33,7 @@
     {
       "id": "event-cad",
       "description": "CAD design competition",
-      "imageUrl": "https://picsum.photos/seed/cad/600/400",
+      "imageUrl": "https://picsum.photos/seed/cad-software/600/400",
       "imageHint": "computer engineering"
     },
     {

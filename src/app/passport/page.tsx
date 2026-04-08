@@ -1,11 +1,12 @@
+
 import { PassportCard } from "@/components/passport-card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Cpu, Zap, Trophy } from "lucide-react";
 
 export default function PassportPage() {
   return (
-    <div className="container mx-auto px-4 py-12 space-y-20 flex flex-col items-center">
+    <div className="container mx-auto px-4 py-12 space-y-20">
       <section className="max-w-4xl mx-auto text-center space-y-6">
         <Badge variant="outline" className="py-1 px-4 border-primary text-primary font-bold tracking-widest uppercase">
           Digital ID
@@ -18,31 +19,64 @@ export default function PassportPage() {
         </p>
       </section>
 
-      {/* Digital Passport Card */}
-      <section className="w-full flex justify-center py-4">
-        <PassportCard />
+      {/* Side-by-Side Layout */}
+      <section className="grid lg:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto">
+        {/* Left: Passport Card */}
+        <div className="flex justify-center lg:justify-end">
+          <PassportCard />
+        </div>
+
+        {/* Right: Get Passport Action */}
+        <div className="flex flex-col gap-8">
+          <div className="glass-card p-10 rounded-3xl w-full space-y-8 border-primary/20 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors -z-10" />
+            
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <div className="space-y-1">
+                <h2 className="font-headline font-bold text-2xl uppercase tracking-tight">Ready to Start?</h2>
+                <p className="text-sm text-muted-foreground">
+                  Secure your spot in the flagship technical festival of IIT Madras.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+               {[
+                 { icon: Cpu, label: "Digital Tracking" },
+                 { icon: Zap, label: "Instant Access" },
+                 { icon: Trophy, label: "Earn Points" }
+               ].map((feat, i) => (
+                 <div key={i} className="flex items-center gap-2 p-3 rounded-xl bg-background/50 border border-white/5">
+                   <feat.icon className="h-4 w-4 text-primary" />
+                   <span className="text-[10px] font-bold uppercase tracking-wider">{feat.label}</span>
+                 </div>
+               ))}
+            </div>
+
+            <Button size="lg" className="w-full h-16 rounded-full text-lg font-bold bg-primary hover:bg-primary/90 cyber-button shadow-lg shadow-primary/25">
+              GET PASSPORT <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+          
+          <div className="flex justify-between items-center px-4">
+             <p className="text-[10px] text-muted-foreground font-medium tracking-widest uppercase opacity-50">
+               Official MEA Digital Asset
+             </p>
+             <div className="h-px flex-1 bg-border mx-4" />
+             <p className="text-[10px] text-primary font-bold tracking-widest uppercase">
+               IIT Madras
+             </p>
+          </div>
+        </div>
       </section>
 
-      {/* Main Action */}
-      <section className="flex flex-col items-center gap-8 w-full max-w-md mx-auto">
-        <div className="glass-card p-8 rounded-3xl w-full text-center space-y-6 border-primary/20 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors -z-10" />
-          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary mb-2">
-            <ShieldCheck className="h-8 w-8" />
-          </div>
-          <div className="space-y-2">
-            <h2 className="font-headline font-bold text-2xl uppercase">Ready to Start?</h2>
-            <p className="text-sm text-muted-foreground">
-              Secure your spot in the flagship technical festival of IIT Madras.
-            </p>
-          </div>
-          <Button size="lg" className="w-full h-16 rounded-full text-lg font-bold bg-primary hover:bg-primary/90 cyber-button shadow-lg shadow-primary/25">
-            GET PASSPORT <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-        
-        <p className="text-xs text-muted-foreground font-medium tracking-widest uppercase opacity-50">
-          Powered by Mechanical Engineering Association
+      <section className="max-w-3xl mx-auto py-20 text-center space-y-4">
+        <h3 className="font-headline font-bold text-2xl">How it works</h3>
+        <p className="text-muted-foreground">
+          Your passport is linked to your registration. Simply present the QR code at any event venue to log your participation and earn activity stamps.
         </p>
       </section>
     </div>
