@@ -77,6 +77,12 @@
       "description": "Techobytes Partner Logo",
       "imageUrl": "https://picsum.photos/seed/techobytes/300/150",
       "imageHint": "tech logo"
+    },
+    {
+      "id": "team-lead",
+      "description": "Generic team lead portrait",
+      "imageUrl": "https://picsum.photos/seed/teamlead/400/400",
+      "imageHint": "professional portrait"
     }
   ]
 }

@@ -1,8 +1,10 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { StatsSection } from "@/components/stats-section";
 import { SponsorsSection } from "@/components/sponsors-section";
+import { TeamSection } from "@/components/team-section";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Rocket, Target, Users, ArrowRight } from "lucide-react";
 
@@ -10,7 +12,7 @@ export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-mechanical');
 
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-0">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -37,7 +39,7 @@ export default function Home() {
             
             <h1 className="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight leading-none animate-fade-in-up [animation-delay:200ms]">
               MECHANICA <br />
-              <span className="text-primary">2026</span>
+              <span className="text-primary text-glow">2026</span>
             </h1>
             
             <div className="space-y-4 animate-fade-in-up [animation-delay:400ms]">
@@ -54,7 +56,7 @@ export default function Home() {
               <Button asChild size="lg" className="rounded-full h-14 px-8 text-lg bg-primary hover:bg-primary/90">
                 <Link href="/events">Explore Events <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-8 text-lg">
+              <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-8 text-lg border-primary text-primary hover:bg-primary/10">
                 <Link href="/passport">Get Your Passport</Link>
               </Button>
             </div>
@@ -62,7 +64,6 @@ export default function Home() {
 
           <div className="relative hidden lg:block animate-fade-in-up [animation-delay:800ms]">
             <div className="relative aspect-square w-full max-w-md mx-auto">
-              {/* Circular tech decoration */}
               <div className="absolute inset-0 border-4 border-dashed border-primary/20 rounded-full animate-[spin_20s_linear_infinite]" />
               <div className="absolute inset-8 border border-accent/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -78,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-card/30">
+      <section className="py-24 bg-card/10">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -92,18 +93,18 @@ export default function Home() {
                   The Mechanical Engineering Association (MEA) is dedicated to fostering a strong community of students within the Department of Mechanical Engineering at IIT Madras.
                 </p>
                 <p>
-                  MEA encourages learning through collaboration and interaction between students, faculty, alumni, and industry professionals. Throughout the year, the association conducts technical events, workshops, competitions, and educational initiatives.
+                  MEA encourages learning through collaboration and interaction between students, faculty, alumni, and industry professionals.
                 </p>
                 <p>
-                  Every year, MEA organizes <span className="text-foreground font-semibold">MECHANICA</span>, a flagship engineering festival that provides a platform for technology enthusiasts to showcase ideas and solve complex engineering challenges.
+                  Every year, MEA organizes <span className="text-foreground font-semibold">MECHANICA</span>, a flagship engineering festival that provides a platform for technology enthusiasts to showcase ideas.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square relative rounded-2xl overflow-hidden glass-card">
+              <div className="aspect-square relative rounded-2xl overflow-hidden glass-card glowing-border">
                 <Image src="https://picsum.photos/seed/mea1/400/400" alt="MEA" fill className="object-cover" data-ai-hint="university campus" />
               </div>
-              <div className="aspect-square relative rounded-2xl overflow-hidden glass-card mt-8">
+              <div className="aspect-square relative rounded-2xl overflow-hidden glass-card mt-8 glowing-border">
                 <Image src="https://picsum.photos/seed/mea2/400/400" alt="MEA" fill className="object-cover" data-ai-hint="lab equipment" />
               </div>
             </div>
@@ -111,8 +112,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive Cards Section */}
-      <section className="py-20">
+      {/* Mission/Vision Section */}
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-2 transition-transform duration-300 glowing-border">
@@ -121,40 +122,41 @@ export default function Home() {
               </div>
               <h3 className="font-headline font-bold text-2xl">Our Mission</h3>
               <p className="text-muted-foreground">
-                To create an engaging environment where every student in the department can collaborate with juniors, seniors, and professors while developing technical and leadership skills.
+                To create an engaging environment where every student in the department can collaborate with juniors, seniors, and professors.
               </p>
             </div>
 
-            <div className="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-2 transition-transform duration-300 glowing-border">
+            <div className="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-2 transition-transform duration-300 glowing-border border-accent/20">
               <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent">
                 <Users className="h-6 w-6" />
               </div>
               <h3 className="font-headline font-bold text-2xl">Our Vision</h3>
-              <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                <li>Encourage deeper exploration of engineering</li>
-                <li>Provide continuous learning opportunities</li>
-                <li>Improve the academic experience of every student</li>
-              </ul>
+              <p className="text-muted-foreground">
+                Encourage deeper exploration of engineering and provide continuous learning opportunities for all students.
+              </p>
             </div>
 
             <div className="glass-card p-8 rounded-3xl space-y-4 hover:-translate-y-2 transition-transform duration-300 glowing-border">
               <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                 <Rocket className="h-6 w-6" />
               </div>
-              <h3 className="font-headline font-bold text-2xl">Why Us</h3>
+              <h3 className="font-headline font-bold text-2xl">Impact</h3>
               <p className="text-muted-foreground">
-                We understand the challenges students face when they join IIT Madras. MEA helps students adapt, grow, and succeed in this dynamic academic environment.
+                We understand the challenges students face and help them adapt, grow, and succeed in this dynamic academic environment.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Impact Stats */}
       <StatsSection />
 
-      {/* Sponsors Section */}
+      {/* Sponsors */}
       <SponsorsSection />
+
+      {/* Team Section */}
+      <TeamSection />
     </div>
   );
 }
