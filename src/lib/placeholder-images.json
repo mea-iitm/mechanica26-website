@@ -55,40 +55,28 @@
       "imageHint": "tech gadgets"
     },
     {
-      "id": "sponsor-1",
-      "description": "Corporate Partner Logo 1",
-      "imageUrl": "https://picsum.photos/seed/sp1/200/100",
-      "imageHint": "corporate logo"
+      "id": "sponsor-sas",
+      "description": "SAS Partner Logo",
+      "imageUrl": "https://picsum.photos/seed/sas/300/150",
+      "imageHint": "sas logo"
     },
     {
-      "id": "sponsor-2",
-      "description": "Corporate Partner Logo 2",
-      "imageUrl": "https://picsum.photos/seed/sp2/200/100",
+      "id": "sponsor-ansys",
+      "description": "Ansys Partner Logo",
+      "imageUrl": "https://picsum.photos/seed/ansys/300/150",
+      "imageHint": "ansys logo"
+    },
+    {
+      "id": "sponsor-unibi",
+      "description": "Unibi Partner Logo",
+      "imageUrl": "https://picsum.photos/seed/unibi/300/150",
+      "imageHint": "unibi logo"
+    },
+    {
+      "id": "sponsor-techobytes",
+      "description": "Techobytes Partner Logo",
+      "imageUrl": "https://picsum.photos/seed/techobytes/300/150",
       "imageHint": "tech logo"
-    },
-    {
-      "id": "sponsor-3",
-      "description": "Corporate Partner Logo 3",
-      "imageUrl": "https://picsum.photos/seed/sp3/200/100",
-      "imageHint": "engineering logo"
-    },
-    {
-      "id": "sponsor-4",
-      "description": "Corporate Partner Logo 4",
-      "imageUrl": "https://picsum.photos/seed/sp4/200/100",
-      "imageHint": "brand logo"
-    },
-    {
-      "id": "sponsor-5",
-      "description": "Corporate Partner Logo 5",
-      "imageUrl": "https://picsum.photos/seed/sp5/200/100",
-      "imageHint": "modern logo"
-    },
-    {
-      "id": "sponsor-6",
-      "description": "Corporate Partner Logo 6",
-      "imageUrl": "https://picsum.photos/seed/sp6/200/100",
-      "imageHint": "global logo"
     }
   ]
 }

@@ -1,15 +1,14 @@
+
 "use client";
 
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const sponsors = [
-  { id: 'sponsor-1', name: 'Partner 1' },
-  { id: 'sponsor-2', name: 'Partner 2' },
-  { id: 'sponsor-3', name: 'Partner 3' },
-  { id: 'sponsor-4', name: 'Partner 4' },
-  { id: 'sponsor-5', name: 'Partner 5' },
-  { id: 'sponsor-6', name: 'Partner 6' },
+  { id: 'sponsor-sas', name: 'SAS' },
+  { id: 'sponsor-ansys', name: 'Ansys' },
+  { id: 'sponsor-unibi', name: 'Unibi' },
+  { id: 'sponsor-techobytes', name: 'Techobytes' },
 ];
 
 export function SponsorsSection() {
@@ -23,13 +22,13 @@ export function SponsorsSection() {
           <p className="text-muted-foreground">Collaborating with industry leaders to shape the future of engineering.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center max-w-5xl mx-auto">
           {sponsors.map((sponsor) => {
             const img = PlaceHolderImages.find(p => p.id === sponsor.id);
             return (
               <div 
                 key={sponsor.id} 
-                className="glass-card h-24 rounded-2xl flex items-center justify-center p-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 border-white/5 bg-gradient-to-br from-card/40 to-card/20 group"
+                className="glass-card h-32 rounded-2xl flex items-center justify-center p-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 border-white/5 bg-gradient-to-br from-card/40 to-card/20 group relative"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -37,8 +36,11 @@ export function SponsorsSection() {
                     alt={sponsor.name}
                     fill
                     className="object-contain"
-                    data-ai-hint="company logo branding"
+                    data-ai-hint={`${sponsor.name.toLowerCase()} logo`}
                   />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/20 backdrop-blur-[2px] rounded-2xl">
+                  <span className="text-xs font-headline font-bold tracking-widest text-primary">{sponsor.name}</span>
                 </div>
               </div>
             );
