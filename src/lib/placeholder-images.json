@@ -55,22 +55,76 @@
       "imageHint": "hardware innovation"
     },
     {
-      "id": "event-ev",
-      "description": "Electric vehicle workshop",
-      "imageUrl": "https://picsum.photos/seed/ev-powertrain-tech/600/400",
-      "imageHint": "electric vehicle"
+      "id": "ws-automation",
+      "description": "Automation workshop",
+      "imageUrl": "https://picsum.photos/seed/automation-industry/600/400",
+      "imageHint": "industrial automation"
     },
     {
-      "id": "event-ai",
-      "description": "AI in mechanical systems workshop",
-      "imageUrl": "https://picsum.photos/seed/ai-robotics-brain/600/400",
+      "id": "ws-ops-mgmt",
+      "description": "Operational management workshop",
+      "imageUrl": "https://picsum.photos/seed/logistics-mgmt/600/400",
+      "imageHint": "operations management"
+    },
+    {
+      "id": "ws-ic-engines",
+      "description": "IC Engines workshop",
+      "imageUrl": "https://picsum.photos/seed/engine-piston/600/400",
+      "imageHint": "car engine"
+    },
+    {
+      "id": "ws-drones",
+      "description": "Drone technology workshop",
+      "imageUrl": "https://picsum.photos/seed/drone-tech/600/400",
+      "imageHint": "drone flight"
+    },
+    {
+      "id": "ws-nextgen-robotics",
+      "description": "Next Gen Robotics workshop",
+      "imageUrl": "https://picsum.photos/seed/future-robot/600/400",
+      "imageHint": "advanced robot"
+    },
+    {
+      "id": "ws-autofusion",
+      "description": "Auto fusion & Ansys workshop",
+      "imageUrl": "https://picsum.photos/seed/simulation-ansys/600/400",
+      "imageHint": "engineering simulation"
+    },
+    {
+      "id": "ws-ev-battery",
+      "description": "EV Battery workshop",
+      "imageUrl": "https://picsum.photos/seed/ev-battery/600/400",
+      "imageHint": "electric battery"
+    },
+    {
+      "id": "ws-gen-ai",
+      "description": "Gen AI workshop",
+      "imageUrl": "https://picsum.photos/seed/ai-brain/600/400",
       "imageHint": "artificial intelligence"
     },
     {
-      "id": "event-advcad",
-      "description": "Advanced CAD workshop",
-      "imageUrl": "https://picsum.photos/seed/generative-design-3d/600/400",
-      "imageHint": "generative design"
+      "id": "ws-ros",
+      "description": "ROS workshop",
+      "imageUrl": "https://picsum.photos/seed/ros-code/600/400",
+      "imageHint": "robotics software"
+    },
+    {
+      "id": "ws-ai-film",
+      "description": "AI in film workshop",
+      "imageUrl": "https://picsum.photos/seed/cinema-ai/600/400",
+      "imageHint": "film production"
+    },
+    {
+      "id": "ws-cybersecurity",
+      "description": "Cyber security workshop",
+      "imageUrl": "https://picsum.photos/seed/security-shield/600/400",
+      "imageHint": "cyber security"
+    },
+    {
+      "id": "ws-iot",
+      "description": "IOT workshop",
+      "imageUrl": "https://picsum.photos/seed/iot-chip/600/400",
+      "imageHint": "internet things"
     },
     {
       "id": "merch-tshirt",
@@ -83,42 +137,6 @@
       "description": "Mechanica festival coupons",
       "imageUrl": "https://picsum.photos/seed/discount-coupons/600/600",
       "imageHint": "voucher tickets"
-    },
-    {
-      "id": "merch-accessories",
-      "description": "Engineering themed accessories",
-      "imageUrl": "https://picsum.photos/seed/accessories/600/600",
-      "imageHint": "tech gadgets"
-    },
-    {
-      "id": "sponsor-sas",
-      "description": "SAS Partner Logo",
-      "imageUrl": "https://picsum.photos/seed/sas/300/150",
-      "imageHint": "sas logo"
-    },
-    {
-      "id": "sponsor-ansys",
-      "description": "Ansys Partner Logo",
-      "imageUrl": "https://picsum.photos/seed/ansys/300/150",
-      "imageHint": "ansys logo"
-    },
-    {
-      "id": "sponsor-unibi",
-      "description": "Unibi Partner Logo",
-      "imageUrl": "https://picsum.photos/seed/unibi/300/150",
-      "imageHint": "unibi logo"
-    },
-    {
-      "id": "sponsor-techobytes",
-      "description": "Techobytes Partner Logo",
-      "imageUrl": "https://picsum.photos/seed/techobytes/300/150",
-      "imageHint": "tech logo"
-    },
-    {
-      "id": "team-lead",
-      "description": "Generic team lead portrait",
-      "imageUrl": "https://picsum.photos/seed/teamlead/400/400",
-      "imageHint": "professional portrait"
     }
   ]
 }

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Calendar, Users } from "lucide-react";
+import { Calendar, Users, Cpu, Settings } from "lucide-react";
 
 const techEvents = [
   { id: 'event-robotics', title: "Robotics Challenge", date: "April 24, 2026", participants: "3-4 members", desc: "Build and battle autonomous robots in a series of navigation and combat challenges." },
@@ -13,15 +13,54 @@ const techEvents = [
   { id: 'event-hackathon', title: "Innovation Hackathon", date: "April 26, 2026", participants: "2-4 members", desc: "Develop hardware solutions for pressing environmental challenges within 24 hours." },
 ];
 
-const workshops = [
-  { id: 'event-ev', title: "EV Powertrain Workshop", date: "April 24, 2026", instructor: "Tesla Engineers", desc: "Hands-on experience with electric vehicle motor control and battery management systems." },
-  { id: 'event-ai', title: "AI in Mechanical Systems", date: "April 25, 2026", instructor: "NVIDIA Academy", desc: "Integrating machine learning into dynamic control loops for robotics and industrial machines." },
-  { id: 'event-advcad', title: "Advanced CAD & Simulation", date: "April 26, 2026", instructor: "Autodesk Masters", desc: "Mastering generative design and finite element analysis (FEA)." },
+const coreWorkshops = [
+  { id: 'ws-automation', title: "Automation in Industry 5.0", desc: "Mastering human-robot collaboration in the next industrial revolution." },
+  { id: 'ws-ops-mgmt', title: "Operational Management", desc: "Optimization strategies for large-scale manufacturing and logistics." },
+  { id: 'ws-ic-engines', title: "IC Engines", desc: "Deep dive into internal combustion mechanics and efficiency improvements." },
+  { id: 'ws-drones', title: "Drone Technology", desc: "Design, control systems, and aerial dynamics of modern UAVs." },
+  { id: 'ws-nextgen-robotics', title: "Next Gen Robotics", desc: "Advanced kinematics and sensor integration for futuristic robotics." },
+  { id: 'ws-autofusion', title: "Auto fusion and Ansys", desc: "High-fidelity simulation and generative design using industry-standard tools." },
+  { id: 'ws-ev-battery', title: "Battery, Powertrain in EVs", desc: "Energy storage solutions and motor control for electric mobility." },
+];
+
+const nonCoreWorkshops = [
+  { id: 'ws-gen-ai', title: "Gen and Agentic AI", desc: "Harnessing LLMs and autonomous agents for engineering problem solving." },
+  { id: 'ws-ros', title: "ROS (Robot Operating System)", desc: "Software frameworks for building complex robot applications." },
+  { id: 'ws-ai-film', title: "AI in Film Making", desc: "Generative tools and AI-driven post-production for creative media." },
+  { id: 'ws-cybersecurity', title: "Cyber Security", desc: "Protecting industrial control systems and IoT networks from threats." },
+  { id: 'ws-iot', title: "IOT (Internet of Things)", desc: "Connecting physical sensors to the cloud for real-time monitoring." },
 ];
 
 export default function EventsPage() {
+  const renderWorkshopCard = (ws: any, accentColor: string, badgeText: string) => {
+    const img = PlaceHolderImages.find(p => p.id === ws.id) || PlaceHolderImages[0];
+    return (
+      <Card key={ws.id} className={`overflow-hidden glass-card group flex flex-col border-white/5 hover:border-${accentColor}/30 transition-all duration-300`}>
+        <div className="aspect-[16/9] relative overflow-hidden">
+          <Image 
+            src={img.imageUrl} 
+            alt={ws.title} 
+            fill 
+            className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
+            data-ai-hint={img.imageHint}
+          />
+          <Badge className={`absolute top-2 right-2 bg-${accentColor}/80 backdrop-blur-md`}>{badgeText}</Badge>
+        </div>
+        <CardContent className="p-6 space-y-4 flex-1">
+          <h3 className={`font-headline font-bold text-xl group-hover:text-${accentColor} transition-colors`}>{ws.title}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">{ws.desc}</p>
+        </CardContent>
+        <CardFooter className="p-6 pt-0">
+          <Button className={`w-full rounded-full bg-${accentColor} hover:bg-${accentColor}/90 text-${accentColor}-foreground font-bold uppercase tracking-tighter text-xs`}>
+            Register
+          </Button>
+        </CardFooter>
+      </Card>
+    );
+  };
+
   return (
-    <div className="container mx-auto px-4 py-12 space-y-20">
+    <div className="container mx-auto px-4 py-12 space-y-24">
       <section className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="font-headline font-bold text-4xl md:text-6xl">
           Events & <span className="text-primary">Workshops</span>
@@ -69,43 +108,31 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Workshops */}
+      {/* Core Workshops */}
        <section className="space-y-8">
         <div className="flex items-center gap-4">
-          <h2 className="font-headline font-bold text-2xl uppercase tracking-tighter text-accent">Workshops</h2>
-          <div className="h-px flex-1 bg-border" />
+          <div className="p-2 bg-accent/10 rounded-lg">
+            <Settings className="h-6 w-6 text-accent" />
+          </div>
+          <h2 className="font-headline font-bold text-3xl uppercase tracking-tighter text-accent">Core Workshops</h2>
+          <div className="h-px flex-1 bg-gradient-to-r from-accent/50 to-transparent" />
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {workshops.map((ws, i) => {
-             const img = PlaceHolderImages.find(p => p.id === ws.id) || PlaceHolderImages[0];
-             return (
-              <Card key={i} className="overflow-hidden glass-card group flex flex-col border-white/5 hover:border-accent/30 transition-all duration-300">
-                <div className="aspect-[16/9] relative overflow-hidden">
-                  <Image 
-                    src={img.imageUrl} 
-                    alt={ws.title} 
-                    fill 
-                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
-                    data-ai-hint={img.imageHint}
-                  />
-                  <Badge className="absolute top-2 right-2 bg-accent/80 backdrop-blur-md">WORKSHOP</Badge>
-                </div>
-                <CardContent className="p-6 space-y-4 flex-1">
-                  <div className="space-y-1">
-                    <h3 className="font-headline font-bold text-2xl group-hover:text-accent transition-colors">{ws.title}</h3>
-                    <p className="text-[10px] text-accent font-bold uppercase tracking-widest">Instructed by {ws.instructor}</p>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium uppercase tracking-tighter">
-                    <Calendar className="h-3 w-3 text-accent" /> {ws.date}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{ws.desc}</p>
-                </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-tighter">Join Workshop</Button>
-                </CardFooter>
-              </Card>
-             )
-          })}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreWorkshops.map(ws => renderWorkshopCard(ws, "accent", "CORE"))}
+        </div>
+      </section>
+
+      {/* Non-Core Workshops */}
+       <section className="space-y-8">
+        <div className="flex items-center gap-4">
+          <div className="p-2 bg-primary/10 rounded-lg">
+            <Cpu className="h-6 w-6 text-primary" />
+          </div>
+          <h2 className="font-headline font-bold text-3xl uppercase tracking-tighter text-primary">Non-Core Workshops</h2>
+          <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {nonCoreWorkshops.map(ws => renderWorkshopCard(ws, "primary", "NON-CORE"))}
         </div>
       </section>
     </div>
