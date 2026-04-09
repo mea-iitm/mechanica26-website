@@ -7,6 +7,12 @@
       "imageHint": "robotics engineering"
     },
     {
+      "id": "mea-logo",
+      "description": "Mechanical Engineering Association Logo",
+      "imageUrl": "https://picsum.photos/seed/mea-logo-gear/200/200",
+      "imageHint": "engineering logo"
+    },
+    {
       "id": "summit-speaker-1",
       "description": "Innovation Summit Speaker 1",
       "imageUrl": "https://picsum.photos/seed/speaker1/400/400",

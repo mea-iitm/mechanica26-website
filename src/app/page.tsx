@@ -10,6 +10,7 @@ import { Rocket, Target, Users, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-mechanical');
+  const logoImg = PlaceHolderImages.find(img => img.id === 'mea-logo');
 
   return (
     <div className="flex flex-col gap-0">
@@ -18,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image
             src={heroImg?.imageUrl || ''}
-            alt="Futuristic Robotics Background"
+            alt="Robotics engineering background"
             fill
             className="object-cover opacity-30 dark:opacity-40"
             priority
@@ -29,6 +30,12 @@ export default function Home() {
 
         <div className="container mx-auto px-4 pt-20 text-center flex flex-col items-center">
           <div className="space-y-8 max-w-4xl">
+            {logoImg && (
+              <div className="relative w-24 h-24 mx-auto mb-6 bg-white/5 p-2 rounded-2xl animate-fade-in-up">
+                <Image src={logoImg.imageUrl} alt="MEA Logo" fill className="object-contain" />
+              </div>
+            )}
+            
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium animate-fade-in-up mx-auto">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -69,10 +76,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="font-headline font-bold text-3xl md:text-4xl">
-                Mechanical Engineering Association <br />
-                <span className="text-primary">IIT Madras</span>
-              </h2>
+              <div className="flex items-center gap-4">
+                <h2 className="font-headline font-bold text-3xl md:text-4xl">
+                  Mechanical Engineering Association <br />
+                  <span className="text-primary">IIT Madras</span>
+                </h2>
+              </div>
               <div className="w-20 h-1 bg-primary" />
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
