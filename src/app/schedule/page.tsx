@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,7 +12,8 @@ const scheduleData = [
       { time: "09:00 AM", title: "Opening Ceremony", loc: "Main Auditorium", type: "Official", desc: "Kickoff of Mechanica 2026 with keynote addresses and inaugural performance." },
       { time: "11:30 AM", title: "Technical Workshops", loc: "Mech Department Labs", type: "Learning", desc: "Hands-on sessions covering advanced robotics and sustainable engineering." },
       { time: "02:00 PM", title: "Design Competitions", loc: "Design Studio", type: "Compete", desc: "The CAD and simulation challenges begin for pre-registered teams." },
-      { time: "05:00 PM", title: "Networking Hi-Tea", loc: "Alumni Lounge", type: "Social", desc: "An informal session to connect with professors and industry experts." },
+      { time: "03:00 PM", title: "Inauguration", loc: "MSB", type: "Official", desc: "The formal inauguration ceremony of Mechanica 2026 at the Mechanical Sciences Block." },
+      { time: "05:00 PM", title: "Campus Tour", loc: "MSB", type: "Social", desc: "A guided exploration of the iconic IIT Madras campus, starting from MSB." },
     ]
   },
   {
