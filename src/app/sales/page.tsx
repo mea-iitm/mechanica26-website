@@ -6,9 +6,18 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 
 const merchandise = [
-  { id: 'merch-tshirt', title: "Official Mech T-Shirt", price: "₹699", desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo." },
-  { id: 'merch-accessories', title: "Engineer's Toolkit Keyring", price: "₹199", desc: "Laser-cut stainless steel with multiple tool functions." },
-  { id: 'merch-notebook', title: "Design Sprint Notebook", price: "₹349", desc: "Grid-lined premium paper for your sketches and ideas." },
+  { 
+    id: 'merch-tshirt', 
+    title: "Official Mech T-Shirt", 
+    price: "₹699", 
+    desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo." 
+  },
+  { 
+    id: 'merch-coupons', 
+    title: "Festival Value Coupons", 
+    price: "₹499", 
+    desc: "Bundle of vouchers for food stalls and partner workshops during Mechanica 2026." 
+  },
 ];
 
 export default function SalesPage() {
@@ -20,7 +29,7 @@ export default function SalesPage() {
           GEAR <span className="text-primary text-glow">UP</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium">
-          Limited edition festival merchandise and essential engineer tools. Designed for those who build the future.
+          Limited edition festival merchandise and essential bundles. Designed for those who build the future.
         </p>
       </section>
 
@@ -31,7 +40,7 @@ export default function SalesPage() {
           <div className="h-px w-full bg-gradient-to-r from-border to-transparent" />
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {merchandise.map((item, i) => {
             const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[i % 5];
             return (
@@ -42,6 +51,7 @@ export default function SalesPage() {
                     alt={item.title} 
                     fill 
                     className="object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" 
+                    data-ai-hint={img.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-bold">PRE-ORDER</Badge>

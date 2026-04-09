@@ -79,6 +79,12 @@
       "imageHint": "black t-shirt"
     },
     {
+      "id": "merch-coupons",
+      "description": "Mechanica festival coupons",
+      "imageUrl": "https://picsum.photos/seed/discount-coupons/600/600",
+      "imageHint": "voucher tickets"
+    },
+    {
       "id": "merch-accessories",
       "description": "Engineering themed accessories",
       "imageUrl": "https://picsum.photos/seed/accessories/600/600",
