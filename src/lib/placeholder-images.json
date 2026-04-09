@@ -33,20 +33,44 @@
     {
       "id": "event-robotics",
       "description": "Robotics challenge event",
-      "imageUrl": "https://picsum.photos/seed/robotics/600/400",
-      "imageHint": "robot competition"
+      "imageUrl": "https://picsum.photos/seed/robot-combat-arena/600/400",
+      "imageHint": "combat robot"
     },
     {
       "id": "event-cad",
       "description": "CAD design competition",
-      "imageUrl": "https://picsum.photos/seed/cad-software/600/400",
-      "imageHint": "computer engineering"
+      "imageUrl": "https://picsum.photos/seed/cad-software-interface/600/400",
+      "imageHint": "cad design"
+    },
+    {
+      "id": "event-simulation",
+      "description": "Manufacturing simulation event",
+      "imageUrl": "https://picsum.photos/seed/industrial-simulation/600/400",
+      "imageHint": "factory simulation"
+    },
+    {
+      "id": "event-hackathon",
+      "description": "Innovation hackathon event",
+      "imageUrl": "https://picsum.photos/seed/innovation-hardware/600/400",
+      "imageHint": "hardware innovation"
     },
     {
       "id": "event-ev",
       "description": "Electric vehicle workshop",
-      "imageUrl": "https://picsum.photos/seed/evpowertrain/600/400",
-      "imageHint": "electric car"
+      "imageUrl": "https://picsum.photos/seed/ev-powertrain-tech/600/400",
+      "imageHint": "electric vehicle"
+    },
+    {
+      "id": "event-ai",
+      "description": "AI in mechanical systems workshop",
+      "imageUrl": "https://picsum.photos/seed/ai-robotics-brain/600/400",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "event-advcad",
+      "description": "Advanced CAD workshop",
+      "imageUrl": "https://picsum.photos/seed/generative-design-3d/600/400",
+      "imageHint": "generative design"
     },
     {
       "id": "merch-tshirt",
