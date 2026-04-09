@@ -17,7 +17,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
-            src={heroImg?.imageUrl || 'https://picsum.photos/seed/ev-background/1200/800'}
+            src={heroImg?.imageUrl || 'https://picsum.photos/seed/electric-car-future/1200/800'}
             alt="Mechanica 2026 - Machina Sentience"
             fill
             className="object-cover opacity-60 dark:opacity-40"

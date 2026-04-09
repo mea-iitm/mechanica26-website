@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Futuristic electric vehicles on a sunlit highway with a modern city skyline and solar infrastructure, representing Machina Sentience.",
-      "imageUrl": "https://picsum.photos/seed/ev-highway-sentience/1200/800",
+      "description": "Futuristic electric vehicle in a high-tech environment, representing Machina Sentience.",
+      "imageUrl": "https://picsum.photos/seed/electric-vehicle-future/1200/800",
       "imageHint": "electric vehicle"
     },
     {
