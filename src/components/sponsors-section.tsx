@@ -1,14 +1,11 @@
 
 "use client";
 
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-
 const sponsors = [
-  { id: 'sponsor-sas', name: 'SAS' },
-  { id: 'sponsor-ansys', name: 'Ansys' },
-  { id: 'sponsor-unibi', name: 'Unibi' },
-  { id: 'sponsor-techobytes', name: 'Techobytes' },
+  { name: 'SAS' },
+  { name: 'Ansys' },
+  { name: 'UNBIC' },
+  { name: 'Techo bytes' },
 ];
 
 export function SponsorsSection() {
@@ -23,28 +20,20 @@ export function SponsorsSection() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center max-w-5xl mx-auto">
-          {sponsors.map((sponsor) => {
-            const img = PlaceHolderImages.find(p => p.id === sponsor.id);
-            return (
-              <div 
-                key={sponsor.id} 
-                className="glass-card h-32 rounded-2xl flex items-center justify-center p-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 border-white/5 bg-gradient-to-br from-card/40 to-card/20 group relative"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={img?.imageUrl || ''}
-                    alt={sponsor.name}
-                    fill
-                    className="object-contain"
-                    data-ai-hint={`${sponsor.name.toLowerCase()} logo`}
-                  />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/20 backdrop-blur-[2px] rounded-2xl">
-                  <span className="text-xs font-headline font-bold tracking-widest text-primary">{sponsor.name}</span>
-                </div>
-              </div>
-            );
-          })}
+          {sponsors.map((sponsor, i) => (
+            <div 
+              key={i} 
+              className="glass-card h-32 rounded-2xl flex items-center justify-center p-6 border-white/5 bg-gradient-to-br from-card/40 to-card/20 group relative overflow-hidden"
+            >
+              <span className="font-headline font-bold text-2xl md:text-3xl tracking-tighter text-foreground group-hover:text-primary transition-colors duration-300 relative z-10">
+                {sponsor.name}
+              </span>
+              
+              {/* Subtle hover glow effect */}
+              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+          ))}
         </div>
       </div>
     </section>
