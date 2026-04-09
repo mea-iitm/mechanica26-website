@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Futuristic robotics and advanced mechanical systems",
-      "imageUrl": "https://picsum.photos/seed/robotics-engineering-2026/1200/800",
-      "imageHint": "robotics engineering"
+      "description": "Advanced electric automobile engineering and powertrain systems",
+      "imageUrl": "https://picsum.photos/seed/electric-car-engineering/1200/800",
+      "imageHint": "electric automobile"
     },
     {
       "id": "mea-logo",
