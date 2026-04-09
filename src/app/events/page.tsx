@@ -7,16 +7,16 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Calendar, Users } from "lucide-react";
 
 const techEvents = [
-  { id: 'event-robotics', title: "Robotics Challenge", date: "March 15, 2026", participants: "3-4 members", desc: "Build and battle autonomous robots in a series of navigation and combat challenges." },
-  { id: 'event-cad', title: "CAD Design Competition", date: "March 16, 2026", participants: "Individual", desc: "Solve real-world industrial design problems using industry-standard CAD software." },
-  { id: 'event-simulation', title: "Manufacturing Simulation", date: "March 15, 2026", participants: "1-2 members", desc: "Optimize production lines in a high-stakes simulation environment." },
-  { id: 'event-hackathon', title: "Innovation Hackathon", date: "March 17, 2026", participants: "2-4 members", desc: "Develop hardware solutions for pressing environmental challenges within 24 hours." },
+  { id: 'event-robotics', title: "Robotics Challenge", date: "April 24, 2026", participants: "3-4 members", desc: "Build and battle autonomous robots in a series of navigation and combat challenges." },
+  { id: 'event-cad', title: "CAD Design Competition", date: "April 25, 2026", participants: "Individual", desc: "Solve real-world industrial design problems using industry-standard CAD software." },
+  { id: 'event-simulation', title: "Manufacturing Simulation", date: "April 24, 2026", participants: "1-2 members", desc: "Optimize production lines in a high-stakes simulation environment." },
+  { id: 'event-hackathon', title: "Innovation Hackathon", date: "April 26, 2026", participants: "2-4 members", desc: "Develop hardware solutions for pressing environmental challenges within 24 hours." },
 ];
 
 const workshops = [
-  { id: 'event-ev', title: "EV Powertrain Workshop", date: "March 15, 2026", instructor: "Tesla Engineers", desc: "Hands-on experience with electric vehicle motor control and battery management systems." },
-  { id: 'event-ai', title: "AI in Mechanical Systems", date: "March 16, 2026", instructor: "NVIDIA Academy", desc: "Integrating machine learning into dynamic control loops for robotics and industrial machines." },
-  { id: 'event-advcad', title: "Advanced CAD & Simulation", date: "March 17, 2026", instructor: "Autodesk Masters", desc: "Mastering generative design and finite element analysis (FEA)." },
+  { id: 'event-ev', title: "EV Powertrain Workshop", date: "April 24, 2026", instructor: "Tesla Engineers", desc: "Hands-on experience with electric vehicle motor control and battery management systems." },
+  { id: 'event-ai', title: "AI in Mechanical Systems", date: "April 25, 2026", instructor: "NVIDIA Academy", desc: "Integrating machine learning into dynamic control loops for robotics and industrial machines." },
+  { id: 'event-advcad', title: "Advanced CAD & Simulation", date: "April 26, 2026", instructor: "Autodesk Masters", desc: "Mastering generative design and finite element analysis (FEA)." },
 ];
 
 export default function EventsPage() {

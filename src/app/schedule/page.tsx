@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +8,7 @@ const scheduleData = [
   {
     id: "day0",
     day: "Day 00",
-    date: "March 15, 2026",
+    date: "April 24, 2026",
     events: [
       { time: "03:00 PM", title: "Inauguration", loc: "MSB", type: "Official", desc: "The formal inauguration ceremony of Mechanica 2026 at the Mechanical Sciences Block." },
       { time: "05:00 PM", title: "Campus Tour", loc: "MSB", type: "Social", desc: "A guided exploration of the iconic IIT Madras campus, starting from MSB." },
@@ -16,7 +17,7 @@ const scheduleData = [
   {
     id: "day1",
     day: "Day 01",
-    date: "March 16, 2026",
+    date: "April 25, 2026",
     events: [
       { time: "10:00 AM", title: "Industry Summit", loc: "Convention Center", type: "Summit", desc: "Leaders from top engineering firms discuss the future of Industry 5.0." },
       { time: "01:30 PM", title: "Robotics Challenges", loc: "Tech Arena", type: "Compete", desc: "The main arena event: robot battles and navigation challenges." },
@@ -26,7 +27,7 @@ const scheduleData = [
   {
     id: "day2",
     day: "Day 02",
-    date: "March 17, 2026",
+    date: "April 26, 2026",
     events: [
       { time: "09:30 AM", title: "Final Competitions", loc: "Tech Arena", type: "Compete", desc: "The top teams face off in the grand finale of the technical challenges." },
       { time: "02:00 PM", title: "Awards Ceremony", loc: "Main Auditorium", type: "Official", desc: "Recognizing the winners of Mechanica 2026 competitions." },
