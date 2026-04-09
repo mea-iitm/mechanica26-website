@@ -18,14 +18,14 @@ export default function Home() {
         <div className="absolute inset-0 -z-10">
           <Image
             src={heroImg?.imageUrl || 'https://picsum.photos/seed/ev-background/1200/800'}
-            alt="Electric Vehicle Engineering"
+            alt="Mechanica 2026 - Machina Sentience"
             fill
-            className="object-cover opacity-40 dark:opacity-30"
+            className="object-cover opacity-60 dark:opacity-40"
             priority
-            data-ai-hint="electric vehicle"
+            data-ai-hint={heroImg?.imageHint || "electric vehicle highway"}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/20 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+          <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]" />
         </div>
 
         <div className="container mx-auto px-4 pt-20 text-center flex flex-col items-center">
@@ -40,7 +40,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              MECHANICA 2026 — COMING SOON
+              MECHANICA 2026 — Machina Sentience
             </div>
             
             <h1 className="font-headline font-bold text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-none animate-fade-in-up [animation-delay:200ms] text-glow">
@@ -54,7 +54,7 @@ export default function Home() {
               </p>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
                 The flagship technical festival where precision engineering meets future innovation. 
-                Experience the evolution of mechanical systems.
+                Experience the evolution of mechanical systems and Machina Sentience.
               </p>
             </div>
 

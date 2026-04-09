@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-mechanical",
-      "description": "Advanced electric automobile engineering and powertrain systems",
-      "imageUrl": "https://picsum.photos/seed/electric-car-engineering/1200/800",
-      "imageHint": "electric automobile"
+      "description": "Futuristic electric vehicles on a sunlit highway with a modern city skyline and solar infrastructure, representing Machina Sentience.",
+      "imageUrl": "https://picsum.photos/seed/ev-highway-sentience/1200/800",
+      "imageHint": "electric vehicle highway"
     },
     {
       "id": "mea-logo",
