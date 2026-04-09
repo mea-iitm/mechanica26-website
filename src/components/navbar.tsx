@@ -3,14 +3,12 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -25,25 +23,15 @@ export function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
-  const logoImg = PlaceHolderImages.find(img => img.id === 'mea-logo');
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-white/5 transition-all">
       <div className="container mx-auto px-4 h-16 flex items-center">
-        {/* Logo Left */}
+        {/* Logo Left - Always using the "M" Icon */}
         <Link href="/" className="flex items-center gap-3 group">
-          {logoImg ? (
-            <div className="relative w-10 h-10 overflow-hidden rounded-lg bg-white/10 p-1">
-              <Image 
-                src={logoImg.imageUrl} 
-                alt="MEA Logo" 
-                fill 
-                className="object-contain transition-transform group-hover:rotate-12" 
-              />
-            </div>
-          ) : (
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-headline font-bold">M</div>
-          )}
+          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-headline font-bold shadow-lg shadow-primary/20 transition-transform group-hover:rotate-12">
+            M
+          </div>
           <span className="font-headline font-bold text-xl tracking-tighter hidden sm:inline-block uppercase">
             MECHANICA <span className="text-primary">2026</span>
           </span>
