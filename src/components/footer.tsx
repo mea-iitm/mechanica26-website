@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 
@@ -28,6 +29,7 @@ export function Footer() {
               <li><Link href="/passport" className="text-muted-foreground hover:text-foreground transition-colors">Passport</Link></li>
               <li><Link href="/events" className="text-muted-foreground hover:text-foreground transition-colors">Events & Workshops</Link></li>
               <li><Link href="/schedule" className="text-muted-foreground hover:text-foreground transition-colors">Full Schedule</Link></li>
+              <li><Link href="/accommodation" className="text-muted-foreground hover:text-foreground transition-colors">Accommodation</Link></li>
               <li><Link href="/sales" className="text-muted-foreground hover:text-foreground transition-colors">Merchandise</Link></li>
             </ul>
           </div>

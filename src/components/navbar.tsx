@@ -17,6 +17,7 @@ const navItems = [
   { name: "Passport", href: "/passport" },
   { name: "Events", href: "/events" },
   { name: "Schedule", href: "/schedule" },
+  { name: "Accommodation", href: "/accommodation" },
   { name: "Store", href: "/sales" },
 ];
 
