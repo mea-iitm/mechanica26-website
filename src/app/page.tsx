@@ -22,7 +22,7 @@ export default function Home() {
             fill
             className="object-cover opacity-60 dark:opacity-40"
             priority
-            data-ai-hint={heroImg?.imageHint || "electric vehicle highway"}
+            data-ai-hint={heroImg?.imageHint || "electric vehicle"}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
           <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]" />
