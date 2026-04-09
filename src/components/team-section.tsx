@@ -19,6 +19,7 @@ const cores = [
   { dept: "Media & Design", members: ["Vivek", "Preetham"] },
   { dept: "Facilities & Requirements", members: ["Yaswanth Mani", "Thomas"] },
   { dept: "Student Relations", members: ["Yaswanth", "Poojith"] },
+  { dept: "Alumni Relations & Outreach", members: ["Laxmi Prasana", "Nikhita"] },
 ];
 
 export function TeamSection() {
