@@ -50,7 +50,7 @@ export default function SchedulePage() {
           Festival <span className="text-primary">Schedule</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Planning your Mechanica experience is easy. Browse the full itinerary for all three days and mark your favorite sessions.
+          Planning your Mechanica experience is easy. Browse the full itinerary for all three days and stay on track.
         </p>
       </section>
 
@@ -127,15 +127,8 @@ export default function SchedulePage() {
         ))}
       </Tabs>
       
-      {/* Legend / Quick Tip */}
-      <div className="mt-20 p-8 rounded-3xl border border-dashed border-border flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-        <div className="space-y-1">
-          <h4 className="font-bold">Need a custom plan?</h4>
-          <p className="text-sm text-muted-foreground">Use our AI Passport tool to generate an itinerary based on your technical interests.</p>
-        </div>
-        <Badge variant="outline" className="px-4 py-2 cursor-pointer hover:bg-muted transition-colors">
-          Go to AI Itinerary →
-        </Badge>
+      <div className="mt-20 p-8 rounded-3xl border border-dashed border-border text-center">
+        <p className="text-sm text-muted-foreground">Make sure to carry your Mechanica Passport for seamless entry to all event venues.</p>
       </div>
     </div>
   );

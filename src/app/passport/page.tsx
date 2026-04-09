@@ -1,8 +1,40 @@
 
+"use client";
+
+import * as React from "react";
 import { PassportCard } from "@/components/passport-card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, X } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+function JotFormEmbed() {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://form.jotform.com/jsform/260984676915070";
+    script.type = "text/javascript";
+    script.async = true;
+    
+    if (containerRef.current) {
+      containerRef.current.innerHTML = ''; 
+      containerRef.current.appendChild(script);
+    }
+  }, []);
+
+  return (
+    <div className="w-full min-h-[500px] overflow-y-auto">
+      <div ref={containerRef} />
+    </div>
+  );
+}
 
 export default function PassportPage() {
   return (
@@ -15,7 +47,7 @@ export default function PassportPage() {
           MECHANICA <span className="text-primary text-glow">PASSPORT</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Your unique digital identity for Mechanica 2026. Access events, track your progress, and unlock exclusive rewards with a single tap.
+          Your unique digital identity for Mechanica 2026. Access events and identify yourself as a registered participant.
         </p>
       </section>
 
@@ -43,9 +75,21 @@ export default function PassportPage() {
               </div>
             </div>
 
-            <Button size="lg" className="w-full h-16 rounded-full text-xl font-bold bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all hover:scale-[1.02]">
-              GET PASSPORT <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="w-full h-16 rounded-full text-xl font-bold bg-primary hover:bg-primary/90 shadow-2xl shadow-primary/40 transition-all hover:scale-[1.02]">
+                  GET PASSPORT <ArrowRight className="ml-2 h-6 w-6" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0 overflow-hidden bg-background">
+                <DialogHeader className="p-6 border-b bg-card">
+                  <DialogTitle className="font-headline text-2xl">Register for Mechanica 2026</DialogTitle>
+                </DialogHeader>
+                <div className="flex-1 overflow-y-auto p-4 md:p-8">
+                  <JotFormEmbed />
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           
           <div className="flex justify-between items-center px-4">
@@ -63,7 +107,7 @@ export default function PassportPage() {
       <section className="max-w-3xl mx-auto py-20 text-center space-y-4">
         <h3 className="font-headline font-bold text-2xl">How it works</h3>
         <p className="text-muted-foreground">
-          Your passport is linked to your registration. Simply present the QR code at any event venue to log your participation and earn activity stamps.
+          Your passport is generated upon successful registration. Simply present it at any event venue to verify your participation status.
         </p>
       </section>
     </div>
