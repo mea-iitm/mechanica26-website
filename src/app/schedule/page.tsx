@@ -6,8 +6,8 @@ import { Clock, MapPin, Calendar as CalendarIcon, ChevronRight } from "lucide-re
 
 const scheduleData = [
   {
-    id: "day1",
-    day: "Day 01",
+    id: "day0",
+    day: "Day 00",
     date: "March 15, 2026",
     events: [
       { time: "09:00 AM", title: "Opening Ceremony", loc: "Main Auditorium", type: "Official", desc: "Kickoff of Mechanica 2026 with keynote addresses and inaugural performance." },
@@ -17,8 +17,8 @@ const scheduleData = [
     ]
   },
   {
-    id: "day2",
-    day: "Day 02",
+    id: "day1",
+    day: "Day 01",
     date: "March 16, 2026",
     events: [
       { time: "10:00 AM", title: "Industry Summit", loc: "Convention Center", type: "Summit", desc: "Leaders from top engineering firms discuss the future of Industry 5.0." },
@@ -27,8 +27,8 @@ const scheduleData = [
     ]
   },
   {
-    id: "day3",
-    day: "Day 03",
+    id: "day2",
+    day: "Day 02",
     date: "March 17, 2026",
     events: [
       { time: "09:30 AM", title: "Final Competitions", loc: "Tech Arena", type: "Compete", desc: "The top teams face off in the grand finale of the technical challenges." },
@@ -54,7 +54,7 @@ export default function SchedulePage() {
         </p>
       </section>
 
-      <Tabs defaultValue="day1" className="space-y-12">
+      <Tabs defaultValue="day0" className="space-y-12">
         <div className="flex justify-center">
           <TabsList className="grid w-full max-w-md grid-cols-3 h-14 p-1 glass-card bg-muted/30">
             {scheduleData.map((day) => (
