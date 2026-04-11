@@ -8,6 +8,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'MECHANICA 2026 | MEA IIT Madras',
   description: 'The flagship annual technical festival of the Mechanical Engineering Association at IIT Madras.',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({
