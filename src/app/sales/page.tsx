@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShoppingBag, ArrowRight } from "lucide-react";
+import { PreOrderDialog } from "@/components/pre-order-dialog";
 
 const merchandise = [
   { 
@@ -61,9 +62,11 @@ export default function SalesPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </CardContent>
                 <CardFooter className="p-8 pt-0">
-                  <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 shadow-lg shadow-primary/20">
-                    <ShoppingBag className="mr-2 h-5 w-5" /> Pre-order Now
-                  </Button>
+                  <PreOrderDialog>
+                    <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 shadow-lg shadow-primary/20">
+                      <ShoppingBag className="mr-2 h-5 w-5" /> Pre-order Now
+                    </Button>
+                  </PreOrderDialog>
                 </CardFooter>
               </Card>
             );
