@@ -34,25 +34,25 @@
     {
       "id": "event-cad",
       "description": "CAD design competition",
-      "imageUrl": "https://picsum.photos/seed/cad-software-interface/600/400",
+      "imageUrl": "/cad.jpg",
       "imageHint": "cad design"
     },
     {
       "id": "event-panel",
       "description": "Expert panel discussion",
-      "imageUrl": "https://picsum.photos/seed/panel-talk/600/400",
+      "imageUrl": "/panel.jpg",
       "imageHint": "panel discussion"
     },
     {
       "id": "event-paper",
       "description": "Technical paper presentation",
-      "imageUrl": "https://picsum.photos/seed/research-presentation/600/400",
+      "imageUrl": "/paper.jpg",
       "imageHint": "presentation research"
     },
     {
       "id": "event-casestudy",
       "description": "Industrial case study competition",
-      "imageUrl": "https://i.pinimg.com/1200x/58/0e/9e/580e9e9b2aa26b37200b0b69d2989a88.jpg",
+      "imageUrl": "/case.jpg",
       "imageHint": "case study"
     },
     {
