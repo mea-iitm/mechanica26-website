@@ -13,8 +13,8 @@ const secretaries = [
 
 const cores = [
   { dept: "Events", members: ["Rutwik", "Mahesh", "Rohan"] },
-  { dept: "Finance", members: ["Chaitanya", "Nandhini"] },
-  { dept: "Web Operations", members: ["Ram"] },
+  { dept: "Finance", members: ["Chaitanya", "Nandini"] },
+  { dept: "Web Operations", members: ["Ram", "Rutwik"] },
   { dept: "Sponsorship", members: ["Manoj Preetham", "Mukesh", "Chandrasekhar Naidu"] },
   { dept: "Media & Design", members: ["Vivek", "Preetham"] },
   { dept: "Facilities & Requirements", members: ["Yaswanth Mani", "Thomas"] },
