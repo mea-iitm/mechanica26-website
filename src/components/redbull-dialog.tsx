@@ -12,6 +12,7 @@ import {
 
 /**
  * A specialized component to embed the Red Bull event JotForm.
+ * Styled with theme-consistent colors.
  */
 function RedBullFormEmbed() {
   const containerRef = React.useRef<HTMLDivElement>(null);
@@ -45,9 +46,11 @@ export function RedBullDialog({ children }: RedBullDialogProps) {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0 overflow-hidden bg-background">
+      <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0 overflow-hidden bg-background border-primary/20">
         <DialogHeader className="p-6 border-b bg-card">
-          <DialogTitle className="font-headline text-2xl uppercase tracking-tighter">Red Bull: Join the Race</DialogTitle>
+          <DialogTitle className="font-headline text-2xl uppercase tracking-tighter text-primary">
+            Red Bull: Join the Race
+          </DialogTitle>
         </DialogHeader>
         <div className="flex-1 overflow-y-auto p-4 md:p-8">
           <RedBullFormEmbed />
