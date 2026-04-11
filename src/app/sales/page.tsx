@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,12 +13,6 @@ const merchandise = [
     price: "₹699", 
     desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo." 
   },
-  { 
-    id: 'merch-coupons', 
-    title: "Festival Value Coupons", 
-    price: "₹499", 
-    desc: "Bundle of vouchers for food stalls and partner workshops during Mechanica 2026." 
-  },
 ];
 
 export default function SalesPage() {
@@ -29,7 +24,7 @@ export default function SalesPage() {
           GEAR <span className="text-primary text-glow">UP</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium">
-          Limited edition festival merchandise and essential bundles. Designed for those who build the future.
+          Limited edition festival merchandise. Designed for those who build the future.
         </p>
       </section>
 
@@ -40,9 +35,9 @@ export default function SalesPage() {
           <div className="h-px w-full bg-gradient-to-r from-border to-transparent" />
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-1 gap-8 max-w-xl mx-auto">
           {merchandise.map((item, i) => {
-            const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[i % 5];
+            const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[0];
             return (
               <Card key={i} className="overflow-hidden glass-card group border-white/5 relative scanline">
                 <div className="aspect-square relative overflow-hidden">
