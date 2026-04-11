@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
+import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,7 +13,6 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                {/* Logo in Footer - No background */}
                 <div className="relative w-14 h-14 flex items-center justify-center">
                   <Image 
                     src="/logo.png" 
@@ -29,12 +28,33 @@ export function Footer() {
                 Innovation meets precision at the flagship technical festival of the Mechanical Engineering Association (MEA) at IIT Madras.
               </p>
             </div>
-            <div className="flex gap-4">
-              {[Instagram, Youtube, Facebook, Linkedin].map((Icon, i) => (
-                <Link key={i} href="#" className="p-2 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                  <Icon className="h-5 w-5" />
-                </Link>
-              ))}
+
+            <div className="space-y-4">
+              <div className="flex gap-4">
+                {[Instagram, Youtube, Facebook, Linkedin].map((Icon, i) => (
+                  <Link key={i} href="#" className="p-2 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                    <Icon className="h-5 w-5" />
+                  </Link>
+                ))}
+              </div>
+              
+              <div className="pt-2 space-y-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Secretary Contacts</p>
+                <div className="flex flex-col sm:flex-row gap-x-8 gap-y-2 text-sm text-muted-foreground font-medium">
+                  <div className="flex items-center gap-2">
+                    <span className="text-foreground">Harsha:</span>
+                    <Link href="tel:+919948761131" className="hover:text-primary transition-colors flex items-center gap-1">
+                      <Phone className="h-3 w-3" /> 9948761131
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-foreground">Goutham:</span>
+                    <Link href="tel:+916281545976" className="hover:text-primary transition-colors flex items-center gap-1">
+                      <Phone className="h-3 w-3" /> 6281545976
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
