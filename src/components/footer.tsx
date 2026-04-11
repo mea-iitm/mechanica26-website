@@ -1,4 +1,6 @@
 
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
@@ -11,13 +13,14 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="relative w-12 h-12 bg-white rounded-xl overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
+                {/* Logo in Footer - No background */}
+                <div className="relative w-14 h-14 flex items-center justify-center">
                   <Image 
                     src="/logo.png" 
                     alt="MEA Logo" 
-                    width={48}
-                    height={48}
-                    className="object-contain p-2"
+                    width={56}
+                    height={56}
+                    className="object-contain"
                   />
                 </div>
                 <h3 className="font-headline font-bold text-3xl tracking-tighter">MECHANICA <span className="text-primary">2026</span></h3>

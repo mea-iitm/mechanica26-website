@@ -30,14 +30,14 @@ export default function Home() {
 
         <div className="container mx-auto px-4 pt-20 text-center flex flex-col items-center">
           <div className="space-y-10 max-w-4xl">
-            {/* Image Logo in Hero */}
-            <div className="relative w-24 h-24 mx-auto mb-6 bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md overflow-hidden">
+            {/* Logo in Hero - No background */}
+            <div className="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center animate-fade-in-up">
                <Image 
                 src="/logo.png" 
                 alt="MEA Logo" 
-                width={96}
-                height={96}
-                className="object-contain p-2"
+                width={128}
+                height={128}
+                className="object-contain"
                 priority
               />
             </div>
