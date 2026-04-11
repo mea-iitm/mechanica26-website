@@ -129,8 +129,8 @@
     {
       "id": "merch-tshirt",
       "description": "Official Mechanica 2026 T-Shirt",
-      "imageUrl": "https://picsum.photos/seed/black-tshirt-design/600/600",
-      "imageHint": "black tshirt"
+      "imageUrl": "https://picsum.photos/seed/tshirt-black-minimal/600/600",
+      "imageHint": "tshirt apparel"
     }
   ]
 }
