@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -73,8 +74,10 @@ export default function AccommodationPage() {
             </p>
           </CardContent>
           <CardFooter className="p-8 pt-0">
-            <Button size="lg" className="w-full h-14 rounded-full text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 group">
-              APPLY HERE <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Button asChild size="lg" className="w-full h-14 rounded-full text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 group">
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfJnHMuX35aA34fAIZx_J5Pu2bA79hBsOvSN-Zr3WxFCpam0g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+                APPLY HERE <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </CardFooter>
         </Card>
