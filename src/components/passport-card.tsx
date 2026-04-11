@@ -37,7 +37,7 @@ export function PassportCard() {
             <div className="flex-1 space-y-4">
               <div className="space-y-0.5">
                 <p className="text-[10px] uppercase text-white/40 tracking-wider">Participant Name</p>
-                <p className="font-headline font-semibold text-xl">ALEX R. DESIGNER</p>
+                <p className="font-headline font-semibold text-xl uppercase">John Alex</p>
               </div>
               <div>
                 <p className="text-[10px] uppercase text-white/40 tracking-wider">Passport ID</p>
