@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -23,14 +25,21 @@ export function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'mea-logo');
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-white/5 transition-all">
       <div className="container mx-auto px-4 h-16 flex items-center">
-        {/* Logo Left - Always using the "M" Icon */}
+        {/* Logo Left - Using MEA Logo Image */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-headline font-bold shadow-lg shadow-primary/20 transition-transform group-hover:rotate-12">
-            M
+          <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg shadow-primary/20 transition-transform group-hover:rotate-12">
+            <Image 
+              src={logo?.imageUrl || "https://picsum.photos/seed/mea-logo/200/200"} 
+              alt="MEA Logo" 
+              fill 
+              className="object-contain p-1"
+              data-ai-hint="engineering logo"
+            />
           </div>
           <span className="font-headline font-bold text-xl tracking-tighter hidden sm:inline-block uppercase">
             MECHANICA <span className="text-primary">2026</span>

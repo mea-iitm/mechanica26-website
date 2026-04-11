@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-mechanical');
+  const logo = PlaceHolderImages.find(img => img.id === 'mea-logo');
 
   return (
     <div className="flex flex-col gap-0">
@@ -30,9 +31,15 @@ export default function Home() {
 
         <div className="container mx-auto px-4 pt-20 text-center flex flex-col items-center">
           <div className="space-y-10 max-w-4xl">
-            {/* Stylized M Logo */}
-            <div className="w-24 h-24 mx-auto mb-6 bg-primary rounded-3xl flex items-center justify-center text-primary-foreground font-headline font-bold text-5xl shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md">
-              M
+            {/* Image Logo in Hero */}
+            <div className="relative w-24 h-24 mx-auto mb-6 bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md overflow-hidden">
+               <Image 
+                src={logo?.imageUrl || "https://picsum.photos/seed/mea-logo/200/200"} 
+                alt="MEA Logo" 
+                fill 
+                className="object-contain p-2"
+                data-ai-hint="engineering logo"
+              />
             </div>
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-[0.2em] uppercase animate-fade-in-up mx-auto">
