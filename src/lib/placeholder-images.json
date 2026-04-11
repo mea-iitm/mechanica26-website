@@ -31,28 +31,28 @@
       "imageHint": "tech leader"
     },
     {
-      "id": "event-robotics",
-      "description": "Robotics challenge event",
-      "imageUrl": "https://picsum.photos/seed/robot-combat-arena/600/400",
-      "imageHint": "combat robot"
-    },
-    {
       "id": "event-cad",
       "description": "CAD design competition",
       "imageUrl": "https://picsum.photos/seed/cad-software-interface/600/400",
       "imageHint": "cad design"
     },
     {
-      "id": "event-simulation",
-      "description": "Manufacturing simulation event",
-      "imageUrl": "https://picsum.photos/seed/industrial-simulation/600/400",
-      "imageHint": "factory simulation"
+      "id": "event-panel",
+      "description": "Expert panel discussion",
+      "imageUrl": "https://picsum.photos/seed/panel-talk/600/400",
+      "imageHint": "panel discussion"
     },
     {
-      "id": "event-hackathon",
-      "description": "Innovation hackathon event",
-      "imageUrl": "https://picsum.photos/seed/innovation-hardware/600/400",
-      "imageHint": "hardware innovation"
+      "id": "event-paper",
+      "description": "Technical paper presentation",
+      "imageUrl": "https://picsum.photos/seed/research-presentation/600/400",
+      "imageHint": "presentation research"
+    },
+    {
+      "id": "event-casestudy",
+      "description": "Industrial case study competition",
+      "imageUrl": "https://picsum.photos/seed/business-case/600/400",
+      "imageHint": "case study"
     },
     {
       "id": "ws-automation",

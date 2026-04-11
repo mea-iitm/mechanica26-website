@@ -6,14 +6,42 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Calendar, Users, Cpu, Settings } from "lucide-react";
+import { Calendar, Users, Cpu, Settings, FileText, MessageSquare, Lightbulb } from "lucide-react";
 import { RegistrationDialog } from "@/components/registration-dialog";
 
 const techEvents = [
-  { id: 'event-robotics', title: "Robotics Challenge", date: "April 24, 2026", participants: "3-4 members", desc: "Build and battle autonomous robots in a series of navigation and combat challenges." },
-  { id: 'event-cad', title: "CAD Design Competition", date: "April 25, 2026", participants: "Individual", desc: "Solve real-world industrial design problems using industry-standard CAD software." },
-  { id: 'event-simulation', title: "Manufacturing Simulation", date: "April 24, 2026", participants: "1-2 members", desc: "Optimize production lines in a high-stakes simulation environment." },
-  { id: 'event-hackathon', title: "Innovation Hackathon", date: "April 26, 2026", participants: "2-4 members", desc: "Develop hardware solutions for pressing environmental challenges within 24 hours." },
+  { 
+    id: 'event-cad', 
+    title: "CAD Design Competition", 
+    date: "April 25, 2026", 
+    participants: "Individual", 
+    desc: "Master the art of digital drafting and 3D modeling to solve complex industrial design challenges using industry-standard tools.",
+    icon: Settings
+  },
+  { 
+    id: 'event-panel', 
+    title: "Panel Discussion", 
+    date: "April 24, 2026", 
+    participants: "Open Session", 
+    desc: "Engage with industry titans and academic leaders as they dissect the evolving landscape of Mechanical Engineering and Machina Sentience.",
+    icon: MessageSquare
+  },
+  { 
+    id: 'event-paper', 
+    title: "Paper Presentation", 
+    date: "April 26, 2026", 
+    participants: "1-2 members", 
+    desc: "A platform to showcase original research and technical innovations. Present your findings to a panel of distinguished experts.",
+    icon: FileText
+  },
+  { 
+    id: 'event-casestudy', 
+    title: "Case Study", 
+    date: "April 25, 2026", 
+    participants: "2-3 members", 
+    desc: "Analyze and resolve real-world industrial dilemmas. Apply your engineering knowledge to propose viable, efficient solutions for global firms.",
+    icon: Lightbulb
+  },
 ];
 
 const coreWorkshops = [
@@ -84,6 +112,7 @@ export default function EventsPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {techEvents.map((event, i) => {
              const img = PlaceHolderImages.find(p => p.id === event.id) || PlaceHolderImages[0];
+             const Icon = event.icon;
              return (
               <Card key={i} className="overflow-hidden glass-card group h-full flex flex-col border-white/5 hover:border-primary/30 transition-all duration-300">
                 <div className="aspect-video relative overflow-hidden">
@@ -94,7 +123,10 @@ export default function EventsPage() {
                     className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
                     data-ai-hint={img.imageHint}
                   />
-                  <Badge className="absolute top-2 right-2 bg-primary/80 backdrop-blur-md">EVENT</Badge>
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <Icon className="h-12 w-12 text-white/80" />
+                  </div>
+                  <Badge className="absolute top-2 right-2 bg-primary/80 backdrop-blur-md font-bold">TECH</Badge>
                 </div>
                 <CardContent className="p-5 flex-1 space-y-3">
                   <h3 className="font-headline font-bold text-xl group-hover:text-primary transition-colors">{event.title}</h3>
