@@ -34,7 +34,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg shadow-primary/20 transition-transform group-hover:rotate-12">
             <Image 
-              src={logo?.imageUrl || "https://picsum.photos/seed/mea-logo/200/200"} 
+              src={logo?.imageUrl || "/mea[logo.png"} 
               alt="MEA Logo" 
               fill 
               className="object-contain p-1"

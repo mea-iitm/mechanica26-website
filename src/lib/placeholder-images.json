@@ -3,13 +3,13 @@
     {
       "id": "hero-mechanical",
       "description": "Futuristic electric vehicle in a high-tech environment, representing Machina Sentience.",
-      "imageUrl": "https://picsum.photos/seed/electric-vehicle-future/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop",
       "imageHint": "electric vehicle"
     },
     {
       "id": "mea-logo",
       "description": "Mechanical Engineering Association Logo",
-      "imageUrl": "https://picsum.photos/seed/mea-logo-gear/200/200",
+      "imageUrl": "/mea[logo.png",
       "imageHint": "engineering logo"
     },
     {

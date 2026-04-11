@@ -18,7 +18,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
-            src={heroImg?.imageUrl || 'https://picsum.photos/seed/electric-car-future/1200/800'}
+            src={heroImg?.imageUrl || 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop'}
             alt="Mechanica 2026 - Machina Sentience"
             fill
             className="object-cover opacity-60 dark:opacity-40"
@@ -34,7 +34,7 @@ export default function Home() {
             {/* Image Logo in Hero */}
             <div className="relative w-24 h-24 mx-auto mb-6 bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md overflow-hidden">
                <Image 
-                src={logo?.imageUrl || "https://picsum.photos/seed/mea-logo/200/200"} 
+                src={logo?.imageUrl || "/mea[logo.png"} 
                 alt="MEA Logo" 
                 fill 
                 className="object-contain p-2"
@@ -104,10 +104,10 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-2 gap-6 relative">
-              <div className="aspect-[3/4] relative rounded-3xl overflow-hidden glass-card glowing-border">
+              <div className="aspect-[3/4] relative rounded-3xl overflow-hidden glass-card rounded-2xl border border-white/5 glowing-border">
                 <Image src="https://picsum.photos/seed/factory-mech/600/800" alt="Mechanical Engineering" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" data-ai-hint="industrial machine" />
               </div>
-              <div className="aspect-[3/4] relative rounded-3xl overflow-hidden glass-card mt-12 glowing-border border-accent/20">
+              <div className="aspect-[3/4] relative rounded-3xl overflow-hidden glass-card mt-12 rounded-2xl border border-accent/20 glowing-border">
                 <Image src="https://picsum.photos/seed/engine-mech/600/800" alt="Automobile Engine" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" data-ai-hint="car engine" />
               </div>
             </div>
