@@ -1,10 +1,13 @@
 
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Calendar, Users, Cpu, Settings } from "lucide-react";
+import { RegistrationDialog } from "@/components/registration-dialog";
 
 const techEvents = [
   { id: 'event-robotics', title: "Robotics Challenge", date: "April 24, 2026", participants: "3-4 members", desc: "Build and battle autonomous robots in a series of navigation and combat challenges." },
@@ -51,9 +54,11 @@ export default function EventsPage() {
           <p className="text-sm text-muted-foreground leading-relaxed">{ws.desc}</p>
         </CardContent>
         <CardFooter className="p-6 pt-0">
-          <Button className={`w-full rounded-full bg-${accentColor} hover:bg-${accentColor}/90 text-${accentColor}-foreground font-bold uppercase tracking-tighter text-xs`}>
-            Register
-          </Button>
+          <RegistrationDialog>
+            <Button className={`w-full rounded-full bg-${accentColor} hover:bg-${accentColor}/90 text-${accentColor}-foreground font-bold uppercase tracking-tighter text-xs`}>
+              Register
+            </Button>
+          </RegistrationDialog>
         </CardFooter>
       </Card>
     );
@@ -100,7 +105,9 @@ export default function EventsPage() {
                   <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">{event.desc}</p>
                 </CardContent>
                 <CardFooter className="p-5 pt-0">
-                  <Button className="w-full rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 transition-all duration-300 font-bold uppercase tracking-tighter text-xs">Register Now</Button>
+                  <RegistrationDialog>
+                    <Button className="w-full rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 transition-all duration-300 font-bold uppercase tracking-tighter text-xs">Register Now</Button>
+                  </RegistrationDialog>
                 </CardFooter>
               </Card>
              )
