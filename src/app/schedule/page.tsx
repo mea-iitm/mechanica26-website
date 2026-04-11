@@ -19,9 +19,14 @@ const scheduleData = [
     day: "Day 01",
     date: "April 25, 2026",
     events: [
-      { time: "10:00 AM", title: "Industry Summit", loc: "Convention Center", type: "Summit", desc: "Leaders from top engineering firms discuss the future of Industry 5.0." },
-      { time: "01:30 PM", title: "Robotics Challenges", loc: "Tech Arena", type: "Compete", desc: "The main arena event: robot battles and navigation challenges." },
-      { time: "04:00 PM", title: "Networking Sessions", loc: "Lobby Hall", type: "Social", desc: "One-on-one sessions with recruitment teams from sponsoring partners." },
+      { time: "09:00 AM", title: "Math Quiz", loc: "MSB", type: "Quiz", desc: "Test your mathematical aptitude in this fast-paced competition." },
+      { time: "09:00 AM - 12:00 PM", title: "Workshops (Session 1)", loc: "Various Dept Labs", type: "Workshop", desc: "Core and Non-Core workshop sessions for pre-registered participants." },
+      { time: "10:00 AM", title: "Mech Quiz", loc: "MSB", type: "Quiz", desc: "Challenge your mechanical engineering core knowledge." },
+      { time: "11:00 AM", title: "GK Quiz", loc: "MSB", type: "Quiz", desc: "A general knowledge quiz covering science, tech, and beyond." },
+      { time: "02:00 PM", title: "Paper Presentation", loc: "Seminar Hall", type: "Tech", desc: "Presentation of technical research papers by finalists." },
+      { time: "02:00 PM - 05:00 PM", title: "Workshops (Session 2)", loc: "Various Dept Labs", type: "Workshop", desc: "Continuation of core and non-core workshop sessions." },
+      { time: "03:30 PM", title: "Case Study", loc: "MSB", type: "Tech", desc: "Resolving industrial dilemmas through engineering analysis." },
+      { time: "07:00 PM", title: "Ideathon", loc: "Convention Center", type: "Tech", desc: "Overnight brainstorming and pitching of engineering solutions." },
     ]
   },
   {
@@ -29,9 +34,10 @@ const scheduleData = [
     day: "Day 02",
     date: "April 26, 2026",
     events: [
-      { time: "09:30 AM", title: "Final Competitions", loc: "Tech Arena", type: "Compete", desc: "The top teams face off in the grand finale of the technical challenges." },
-      { time: "02:00 PM", title: "Awards Ceremony", loc: "Main Auditorium", type: "Official", desc: "Recognizing the winners of Mechanica 2026 competitions." },
-      { time: "05:00 PM", title: "Closing Event", loc: "Garden Stage", type: "Official", desc: "The festival concludes with a celebratory cultural night." },
+      { time: "09:00 AM - 12:00 PM", title: "Workshops (Session 3)", loc: "Various Dept Labs", type: "Workshop", desc: "Final morning session for workshops." },
+      { time: "10:00 AM", title: "CAD Design Competition", loc: "Design Hall", type: "Tech", desc: "The flagship digital drafting and 3D modeling showdown." },
+      { time: "02:00 PM - 05:00 PM", title: "Workshops (Session 4)", loc: "Various Dept Labs", type: "Workshop", desc: "Final practical sessions and project completion for workshops." },
+      { time: "05:00 PM", title: "Closing Event", loc: "Garden Stage", type: "Official", desc: "Awards ceremony and cultural night concluding Mechanica 2026." },
     ]
   }
 ];
@@ -52,7 +58,7 @@ export default function SchedulePage() {
         </p>
       </section>
 
-      <Tabs defaultValue="day0" className="space-y-12">
+      <Tabs defaultValue="day1" className="space-y-12">
         <div className="flex justify-center">
           <TabsList className="grid w-full max-w-md grid-cols-3 h-14 p-1 glass-card bg-muted/30">
             {scheduleData.map((day) => (
@@ -84,9 +90,9 @@ export default function SchedulePage() {
                   <CardContent className="p-0">
                     <div className="flex flex-col md:flex-row">
                       {/* Time Sidebar */}
-                      <div className="md:w-48 bg-muted/50 p-6 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/5 group-hover:bg-primary/5 transition-colors">
+                      <div className="md:w-56 bg-muted/50 p-6 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/5 group-hover:bg-primary/5 transition-colors">
                         <Clock className="h-5 w-5 text-primary mb-2" />
-                        <span className="font-headline font-bold text-lg">{event.time}</span>
+                        <span className="font-headline font-bold text-sm lg:text-base">{event.time}</span>
                       </div>
 
                       {/* Content Area */}

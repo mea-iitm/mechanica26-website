@@ -6,30 +6,22 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Calendar, Users, Cpu, Settings, FileText, MessageSquare, Lightbulb } from "lucide-react";
+import { Calendar, Users, Cpu, Settings, FileText, Lightbulb, Zap, HelpCircle } from "lucide-react";
 import { RegistrationDialog } from "@/components/registration-dialog";
 
 const techEvents = [
   { 
-    id: 'event-cad', 
-    title: "CAD Design Competition", 
-    date: "April 25, 2026", 
+    id: 'event-quiz', 
+    title: "Technical Quizzes", 
+    date: "April 25, 2026 (9 AM onwards)", 
     participants: "Individual", 
-    desc: "Master the art of digital drafting and 3D modeling to solve complex industrial design challenges using industry-standard tools.",
-    icon: Settings
-  },
-  { 
-    id: 'event-panel', 
-    title: "Panel Discussion", 
-    date: "April 24, 2026", 
-    participants: "Open Session", 
-    desc: "Engage with industry titans and academic leaders as they dissect the evolving landscape of Mechanical Engineering and Machina Sentience.",
-    icon: MessageSquare
+    desc: "Test your mental mettle in Math (9 AM), Mechanical Engineering (10 AM), and General Knowledge (11 AM). Fast-paced and challenging.",
+    icon: HelpCircle
   },
   { 
     id: 'event-paper', 
     title: "Paper Presentation", 
-    date: "April 26, 2026", 
+    date: "April 25, 2026 (2 PM)", 
     participants: "1-2 members", 
     desc: "A platform to showcase original research and technical innovations. Present your findings to a panel of distinguished experts.",
     icon: FileText
@@ -37,29 +29,45 @@ const techEvents = [
   { 
     id: 'event-casestudy', 
     title: "Case Study", 
-    date: "April 25, 2026", 
+    date: "April 25, 2026 (3:30 PM)", 
     participants: "2-3 members", 
-    desc: "Analyze and resolve real-world industrial dilemmas. Apply your engineering knowledge to propose viable, efficient solutions for global firms.",
+    desc: "Analyze and resolve real-world industrial dilemmas. Apply your engineering knowledge to propose viable, efficient solutions.",
     icon: Lightbulb
+  },
+  { 
+    id: 'event-ideathon', 
+    title: "Ideathon", 
+    date: "April 25, 2026 (7 PM)", 
+    participants: "3-5 members", 
+    desc: "A high-intensity brainstorming session to solve modern engineering challenges with creative and sustainable ideas.",
+    icon: Zap
+  },
+  { 
+    id: 'event-cad', 
+    title: "CAD Design Competition", 
+    date: "April 26, 2026 (10 AM)", 
+    participants: "Individual", 
+    desc: "Master the art of digital drafting and 3D modeling to solve complex industrial design challenges using industry-standard tools.",
+    icon: Settings
   },
 ];
 
 const coreWorkshops = [
-  { id: 'ws-automation', title: "Automation in Industry 5.0", desc: "Mastering human-robot collaboration in the next industrial revolution." },
-  { id: 'ws-ops-mgmt', title: "Operational Management", desc: "Optimization strategies for large-scale manufacturing and logistics." },
-  { id: 'ws-ic-engines', title: "IC Engines", desc: "Deep dive into internal combustion mechanics and efficiency improvements." },
-  { id: 'ws-drones', title: "Drone Technology", desc: "Design, control systems, and aerial dynamics of modern UAVs." },
-  { id: 'ws-nextgen-robotics', title: "Next Gen Robotics", desc: "Advanced kinematics and sensor integration for futuristic robotics." },
-  { id: 'ws-autofusion', title: "Auto fusion and Ansys", desc: "High-fidelity simulation and generative design using industry-standard tools." },
-  { id: 'ws-ev-battery', title: "Battery, Powertrain in EVs", desc: "Energy storage solutions and motor control for electric mobility." },
+  { id: 'ws-automation', title: "Automation in Industry 5.0", desc: "Master human-robot collaboration. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ops-mgmt', title: "Operational Management", desc: "Optimization strategies for manufacturing. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ic-engines', title: "IC Engines", desc: "Deep dive into engine mechanics. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-drones', title: "Drone Technology", desc: "Design and dynamics of modern UAVs. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-nextgen-robotics', title: "Next Gen Robotics", desc: "Advanced kinematics and sensor integration. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-autofusion', title: "Auto fusion and Ansys", desc: "High-fidelity simulation and generative design. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ev-battery', title: "Battery, Powertrain in EVs", desc: "Energy storage solutions for electric mobility. (9 AM-12 PM & 2 PM-5 PM)" },
 ];
 
 const nonCoreWorkshops = [
-  { id: 'ws-gen-ai', title: "Gen and Agentic AI", desc: "Harnessing LLMs and autonomous agents for engineering problem solving." },
-  { id: 'ws-ros', title: "ROS (Robot Operating System)", desc: "Software frameworks for building complex robot applications." },
-  { id: 'ws-ai-film', title: "AI in Film Making", desc: "Generative tools and AI-driven post-production for creative media." },
-  { id: 'ws-cybersecurity', title: "Cyber Security", desc: "Protecting industrial control systems and IoT networks from threats." },
-  { id: 'ws-iot', title: "IOT (Internet of Things)", desc: "Connecting physical sensors to the cloud for real-time monitoring." },
+  { id: 'ws-gen-ai', title: "Gen and Agentic AI", desc: "Harnessing LLMs for engineering. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ros', title: "ROS (Robot Operating System)", desc: "Software frameworks for robot applications. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ai-film', title: "AI in Film Making", desc: "Generative tools for creative media. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-cybersecurity', title: "Cyber Security", desc: "Protecting industrial control systems. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-iot', title: "IOT (Internet of Things)", desc: "Connecting sensors for real-time monitoring. (9 AM-12 PM & 2 PM-5 PM)" },
 ];
 
 export default function EventsPage() {
@@ -109,7 +117,7 @@ export default function EventsPage() {
           <h2 className="font-headline font-bold text-2xl uppercase tracking-tighter text-primary">Technical Events</h2>
           <div className="h-px flex-1 bg-border" />
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techEvents.map((event, i) => {
              const img = PlaceHolderImages.find(p => p.id === event.id) || PlaceHolderImages[0];
              const Icon = event.icon;

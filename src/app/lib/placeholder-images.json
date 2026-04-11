@@ -56,6 +56,18 @@
       "imageHint": "case study"
     },
     {
+      "id": "event-quiz",
+      "description": "Technical quiz competition",
+      "imageUrl": "https://picsum.photos/seed/quiz-tech/600/400",
+      "imageHint": "quiz competition"
+    },
+    {
+      "id": "event-ideathon",
+      "description": "Engineering ideathon session",
+      "imageUrl": "https://picsum.photos/seed/ideathon/600/400",
+      "imageHint": "brainstorming ideas"
+    },
+    {
       "id": "ws-automation",
       "description": "Automation workshop",
       "imageUrl": "https://picsum.photos/seed/automation-industry/600/400",
