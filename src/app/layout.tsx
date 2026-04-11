@@ -1,9 +1,11 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { RedBullAd } from '@/components/redbull-ad';
 
 export const metadata: Metadata = {
   title: 'MECHANICA 2026 | MEA IIT Madras',
@@ -33,6 +35,7 @@ export default function RootLayout({
           <main className="flex-1 pt-16">
             {children}
           </main>
+          <RedBullAd />
           <Footer />
           <Toaster />
         </ThemeProvider>
