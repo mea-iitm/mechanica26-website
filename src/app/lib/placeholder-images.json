@@ -1,0 +1,137 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-mechanical",
+      "description": "Futuristic electric vehicle in a high-tech environment, representing Machina Sentience.",
+      "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop",
+      "imageHint": "electric vehicle"
+    },
+    {
+      "id": "mea-logo",
+      "description": "Mechanical Engineering Association Logo",
+      "imageUrl": "/logo.png",
+      "imageHint": "engineering logo"
+    },
+    {
+      "id": "summit-speaker-1",
+      "description": "Innovation Summit Speaker 1",
+      "imageUrl": "https://picsum.photos/seed/speaker1/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "summit-speaker-2",
+      "description": "Innovation Summit Speaker 2",
+      "imageUrl": "https://picsum.photos/seed/speaker2/400/400",
+      "imageHint": "professional engineer"
+    },
+    {
+      "id": "summit-speaker-3",
+      "description": "Innovation Summit Speaker 3",
+      "imageUrl": "https://picsum.photos/seed/speaker3/400/400",
+      "imageHint": "tech leader"
+    },
+    {
+      "id": "event-cad",
+      "description": "CAD design competition",
+      "imageUrl": "https://picsum.photos/seed/cad-software-interface/600/400",
+      "imageHint": "cad design"
+    },
+    {
+      "id": "event-panel",
+      "description": "Expert panel discussion",
+      "imageUrl": "https://picsum.photos/seed/panel-talk/600/400",
+      "imageHint": "panel discussion"
+    },
+    {
+      "id": "event-paper",
+      "description": "Technical paper presentation",
+      "imageUrl": "https://picsum.photos/seed/research-presentation/600/400",
+      "imageHint": "presentation research"
+    },
+    {
+      "id": "event-casestudy",
+      "description": "Industrial case study competition",
+      "imageUrl": "https://picsum.photos/seed/business-case/600/400",
+      "imageHint": "case study"
+    },
+    {
+      "id": "ws-automation",
+      "description": "Automation workshop",
+      "imageUrl": "https://picsum.photos/seed/automation-industry/600/400",
+      "imageHint": "industrial automation"
+    },
+    {
+      "id": "ws-ops-mgmt",
+      "description": "Operational management workshop",
+      "imageUrl": "https://picsum.photos/seed/logistics-mgmt/600/400",
+      "imageHint": "operations management"
+    },
+    {
+      "id": "ws-ic-engines",
+      "description": "IC Engines workshop",
+      "imageUrl": "https://picsum.photos/seed/engine-piston/600/400",
+      "imageHint": "car engine"
+    },
+    {
+      "id": "ws-drones",
+      "description": "Drone technology workshop",
+      "imageUrl": "https://picsum.photos/seed/drone-tech/600/400",
+      "imageHint": "drone flight"
+    },
+    {
+      "id": "ws-nextgen-robotics",
+      "description": "Next Gen Robotics workshop",
+      "imageUrl": "https://picsum.photos/seed/future-robot/600/400",
+      "imageHint": "advanced robot"
+    },
+    {
+      "id": "ws-autofusion",
+      "description": "Auto fusion & Ansys workshop",
+      "imageUrl": "https://picsum.photos/seed/simulation-ansys/600/400",
+      "imageHint": "engineering simulation"
+    },
+    {
+      "id": "ws-ev-battery",
+      "description": "EV Battery workshop",
+      "imageUrl": "https://picsum.photos/seed/ev-battery/600/400",
+      "imageHint": "electric battery"
+    },
+    {
+      "id": "ws-gen-ai",
+      "description": "Gen AI workshop",
+      "imageUrl": "https://picsum.photos/seed/ai-brain/600/400",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "ws-ros",
+      "description": "ROS workshop",
+      "imageUrl": "https://picsum.photos/seed/ros-code/600/400",
+      "imageHint": "robotics software"
+    },
+    {
+      "id": "ws-ai-film",
+      "description": "AI in film workshop",
+      "imageUrl": "https://picsum.photos/seed/cinema-ai/600/400",
+      "imageHint": "film production"
+    },
+    {
+      "id": "ws-cybersecurity",
+      "description": "Cyber security workshop",
+      "imageUrl": "https://picsum.photos/seed/security-shield/600/400",
+      "imageHint": "cyber security"
+    },
+    {
+      "id": "ws-iot",
+      "description": "IOT workshop",
+      "imageUrl": "https://picsum.photos/seed/iot-chip/600/400",
+      "imageHint": "internet things"
+    },
+    {
+      "id": "merch-tshirt",
+      "description": "Official Mechanica 2026 T-Shirt",
+      "imageUrl": "https://picsum.photos/seed/tshirt-black-minimal/600/600",
+      "imageHint": "tshirt apparel"
+    }
+  ]
+}
