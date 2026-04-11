@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * A floating promotion component that nudges users towards the merchandise store.
- * Appears with a sliding motion after a delay and can be dismissed for the session.
+ * Appears with a sliding motion after a delay and automatically hides after 30 seconds.
  */
 export function MerchPromo() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,12 +23,20 @@ export function MerchPromo() {
       return;
     }
 
-    // Delay the appearance to let the main page content load first
-    const timer = setTimeout(() => {
+    // Delay the appearance by 4 seconds
+    const showTimer = setTimeout(() => {
       setIsVisible(true);
     }, 4000);
 
-    return () => clearTimeout(timer);
+    // Hide the promo after 30 seconds of being visible (Total 34 seconds from mount)
+    const hideTimer = setTimeout(() => {
+      setIsVisible(false);
+    }, 34000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   const handleDismiss = () => {

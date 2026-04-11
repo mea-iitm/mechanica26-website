@@ -1,11 +1,9 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { MerchPromo } from '@/components/merch-promo';
 
 export const metadata: Metadata = {
   title: 'MECHANICA 2026 | MEA IIT Madras',
@@ -37,7 +35,6 @@ export default function RootLayout({
           </main>
           <Footer />
           <Toaster />
-          <MerchPromo />
         </ThemeProvider>
       </body>
     </html>

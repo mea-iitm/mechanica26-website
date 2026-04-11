@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -7,12 +6,15 @@ import { SponsorsSection } from "@/components/sponsors-section";
 import { TeamSection } from "@/components/team-section";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
+import { MerchPromo } from "@/components/merch-promo";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-mechanical');
 
   return (
     <div className="flex flex-col gap-0">
+      <MerchPromo />
+      
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
