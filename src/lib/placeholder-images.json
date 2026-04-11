@@ -129,14 +129,8 @@
     {
       "id": "merch-tshirt",
       "description": "Mechanica official T-shirt",
-      "imageUrl": "https://picsum.photos/seed/tshirt/600/600",
-      "imageHint": "black t-shirt"
-    },
-    {
-      "id": "merch-coupons",
-      "description": "Mechanica festival coupons",
-      "imageUrl": "https://picsum.photos/seed/discount-coupons/600/600",
-      "imageHint": "voucher tickets"
+      "imageUrl": "https://picsum.photos/seed/black-tshirt-mockup/600/600",
+      "imageHint": "black tshirt"
     }
   ]
 }

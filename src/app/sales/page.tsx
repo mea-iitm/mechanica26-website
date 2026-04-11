@@ -11,7 +11,7 @@ const merchandise = [
     id: 'merch-tshirt', 
     title: "Official Mech T-Shirt", 
     price: "₹699", 
-    desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo." 
+    desc: "Premium cotton with glow-in-the-dark Mechanica 2026 logo. Engineered for comfort and style." 
   },
 ];
 
@@ -40,12 +40,12 @@ export default function SalesPage() {
             const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[0];
             return (
               <Card key={i} className="overflow-hidden glass-card group border-white/5 relative scanline">
-                <div className="aspect-square relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden bg-muted/20">
                   <Image 
                     src={img.imageUrl} 
                     alt={item.title} 
                     fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" 
+                    className="object-contain p-8 group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" 
                     data-ai-hint={img.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -59,8 +59,8 @@ export default function SalesPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </CardContent>
                 <CardFooter className="p-8 pt-0">
-                  <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 shadow-lg shadow-primary/20">
-                    <ShoppingBag className="mr-2 h-4 w-4" /> Add to Toolkit
+                  <Button className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 shadow-lg shadow-primary/20">
+                    <ShoppingBag className="mr-2 h-5 w-5" /> Pre-order Now
                   </Button>
                 </CardFooter>
               </Card>
@@ -73,8 +73,8 @@ export default function SalesPage() {
       <section className="bg-primary/5 border border-primary/20 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[120px] rounded-full" />
         <div className="space-y-2 relative">
-          <h3 className="font-headline font-bold text-3xl">Group Bookings?</h3>
-          <p className="text-muted-foreground">Contact us for bulk merchandise orders for your department or college.</p>
+          <h3 className="font-headline font-bold text-3xl">Departmental Orders?</h3>
+          <p className="text-muted-foreground">Contact us for bulk merchandise orders for your department or college teams.</p>
         </div>
         <Button variant="outline" className="rounded-full h-14 px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground group relative">
           Contact Sales Team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
