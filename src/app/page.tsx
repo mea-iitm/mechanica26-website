@@ -34,7 +34,7 @@ export default function Home() {
             {/* Image Logo in Hero */}
             <div className="relative w-24 h-24 mx-auto mb-6 bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md overflow-hidden">
                <Image 
-                src={logo?.imageUrl || "/mea[logo.png"} 
+                src={logo?.imageUrl || "/logo.png"} 
                 alt="MEA Logo" 
                 fill 
                 className="object-contain p-2"
