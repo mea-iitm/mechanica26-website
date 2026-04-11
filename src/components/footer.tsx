@@ -2,11 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Footer() {
-  const logo = PlaceHolderImages.find(img => img.id === 'mea-logo');
-
   return (
     <footer className="bg-card/30 border-t border-white/5 mt-20 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
@@ -16,11 +13,11 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <div className="relative w-12 h-12 bg-white rounded-xl overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
                   <Image 
-                    src={logo?.imageUrl || "/logo.png"} 
+                    src="/logo.png" 
                     alt="MEA Logo" 
-                    fill 
+                    width={48}
+                    height={48}
                     className="object-contain p-2"
-                    data-ai-hint="engineering logo"
                   />
                 </div>
                 <h3 className="font-headline font-bold text-3xl tracking-tighter">MECHANICA <span className="text-primary">2026</span></h3>

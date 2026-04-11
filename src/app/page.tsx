@@ -10,7 +10,6 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-mechanical');
-  const logo = PlaceHolderImages.find(img => img.id === 'mea-logo');
 
   return (
     <div className="flex flex-col gap-0">
@@ -34,11 +33,12 @@ export default function Home() {
             {/* Image Logo in Hero */}
             <div className="relative w-24 h-24 mx-auto mb-6 bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/40 animate-fade-in-up border border-white/10 backdrop-blur-md overflow-hidden">
                <Image 
-                src={logo?.imageUrl || "/logo.png"} 
+                src="/logo.png" 
                 alt="MEA Logo" 
-                fill 
+                width={96}
+                height={96}
                 className="object-contain p-2"
-                data-ai-hint="engineering logo"
+                priority
               />
             </div>
             

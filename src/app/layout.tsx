@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title: 'MECHANICA 2026 | MEA IIT Madras',
   description: 'The flagship annual technical festival of the Mechanical Engineering Association at IIT Madras.',
   icons: {
-    icon: '/logo.png',
+    icon: '/logo.png', // Note: browser expects this in public/logo.png
   },
 };
 
