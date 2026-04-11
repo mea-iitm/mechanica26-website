@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * A floating promotion component that nudges users towards the merchandise store.
- * Appears with a sliding motion after a delay and automatically hides after 30 seconds.
+ * Appears immediately on load and automatically hides after 30 seconds.
  */
 export function MerchPromo() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,15 +23,15 @@ export function MerchPromo() {
       return;
     }
 
-    // Delay the appearance by 4 seconds
+    // Show immediately with a tiny delay to ensure animation triggers
     const showTimer = setTimeout(() => {
       setIsVisible(true);
-    }, 4000);
+    }, 100);
 
-    // Hide the promo after 30 seconds of being visible (Total 34 seconds from mount)
+    // Hide the promo after 30 seconds of being visible
     const hideTimer = setTimeout(() => {
       setIsVisible(false);
-    }, 34000);
+    }, 30100);
 
     return () => {
       clearTimeout(showTimer);
