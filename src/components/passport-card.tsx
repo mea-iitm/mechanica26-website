@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { User, QrCode, ShieldCheck } from "lucide-react";
 
@@ -11,9 +12,20 @@ export function PassportCard() {
         {/* Card Front */}
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-white/20 shadow-2xl overflow-hidden backface-hidden flex flex-col p-8 text-white">
           <div className="flex justify-between items-start mb-10">
-            <div className="space-y-1">
-              <h3 className="font-headline font-bold text-2xl tracking-tight">MECHANICA</h3>
-              <p className="text-[10px] uppercase tracking-widest text-primary font-bold">Official Festival Identity</p>
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10 flex items-center justify-center">
+                <Image 
+                  src="/logo.png" 
+                  alt="MEA Logo" 
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-headline font-bold text-2xl tracking-tight leading-none">MECHANICA</h3>
+                <p className="text-[10px] uppercase tracking-widest text-primary font-bold">Official Festival Identity</p>
+              </div>
             </div>
             <ShieldCheck className="h-10 w-10 text-primary/80" />
           </div>
