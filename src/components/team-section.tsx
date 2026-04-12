@@ -18,7 +18,7 @@ const cores = [
   { dept: "Sponsorship", members: ["Manoj Preetham", "Mukesh", "Chandrasekhar Naidu"] },
   { dept: "Media & Design", members: ["Vivek", "Preetham"] },
   { dept: "Facilities & Requirements", members: ["Yaswanth Mani", "Thomas"] },
-  { dept: "Student Relations", members: ["Yaswanth", "Poojith"] },
+  { dept: "Student Relations", members: ["Yaswanth", "Poojith", "Goutham"] },
   { dept: "Alumni Relations & Outreach", members: ["Laxmi Prasana", "Nikhita"] },
 ];
 
