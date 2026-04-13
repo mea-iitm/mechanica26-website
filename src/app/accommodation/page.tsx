@@ -47,13 +47,13 @@ export default function AccommodationPage() {
           </div>
         </div>
 
-        <Card className="overflow-hidden glass-card border-primary/20 glowing-border group relative">
+        <Card className="overflow-hidden glass-card border-primary/20 glowing-border group relative transition-transform duration-500 hover:scale-[1.02]">
           <div className="aspect-[4/3] relative overflow-hidden">
             <Image 
               src="https://picsum.photos/seed/hostel-pampa/800/600" 
               alt="Pampa Hostel" 
               fill 
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="object-cover group-hover:scale-110 transition-all duration-500"
               data-ai-hint="hostel building"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />

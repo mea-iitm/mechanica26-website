@@ -74,19 +74,19 @@ export default function EventsPage() {
   const renderWorkshopCard = (ws: any, accentColor: string, badgeText: string) => {
     const img = PlaceHolderImages.find(p => p.id === ws.id) || PlaceHolderImages[0];
     return (
-      <Card key={ws.id} className={`overflow-hidden glass-card group flex flex-col border-white/5 hover:border-${accentColor}/30 transition-all duration-300`}>
+      <Card key={ws.id} className={`overflow-hidden glass-card group flex flex-col border-white/5 hover:border-${accentColor}/30 transition-all duration-300 hover:scale-[1.02]`}>
         <div className="aspect-[16/9] relative overflow-hidden">
           <Image 
             src={img.imageUrl} 
             alt={ws.title} 
             fill 
-            className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
+            className="object-cover group-hover:scale-110 transition-all duration-500" 
             data-ai-hint={img.imageHint}
           />
           <Badge className={`absolute top-2 right-2 bg-${accentColor}/80 backdrop-blur-md`}>{badgeText}</Badge>
         </div>
         <CardContent className="p-6 space-y-4 flex-1">
-          <h3 className={`font-headline font-bold text-xl group-hover:text-${accentColor} transition-colors`}>{ws.title}</h3>
+          <h3 className={`font-headline font-bold text-xl transition-colors`}>{ws.title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{ws.desc}</p>
         </CardContent>
         <CardFooter className="p-6 pt-0">
@@ -122,13 +122,13 @@ export default function EventsPage() {
              const img = PlaceHolderImages.find(p => p.id === event.id) || PlaceHolderImages[0];
              const Icon = event.icon;
              return (
-              <Card key={i} className="overflow-hidden glass-card group h-full flex flex-col border-white/5 hover:border-primary/30 transition-all duration-300">
+              <Card key={i} className="overflow-hidden glass-card group h-full flex flex-col border-white/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02]">
                 <div className="aspect-video relative overflow-hidden">
                   <Image 
                     src={img.imageUrl} 
                     alt={event.title} 
                     fill 
-                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500" 
+                    className="object-cover group-hover:scale-110 transition-all duration-500" 
                     data-ai-hint={img.imageHint}
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -137,7 +137,7 @@ export default function EventsPage() {
                   <Badge className="absolute top-2 right-2 bg-primary/80 backdrop-blur-md font-bold">TECH</Badge>
                 </div>
                 <CardContent className="p-5 flex-1 space-y-3">
-                  <h3 className="font-headline font-bold text-xl group-hover:text-primary transition-colors">{event.title}</h3>
+                  <h3 className="font-headline font-bold text-xl transition-colors">{event.title}</h3>
                   <div className="flex flex-col gap-2 text-[10px] uppercase font-bold tracking-widest text-muted-foreground">
                     <div className="flex items-center gap-2"><Calendar className="h-3 w-3 text-primary" /> {event.date}</div>
                     <div className="flex items-center gap-2"><Users className="h-3 w-3 text-primary" /> {event.participants}</div>

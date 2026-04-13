@@ -42,13 +42,13 @@ export default function SalesPage() {
           {merchandise.map((item, i) => {
             const img = PlaceHolderImages.find(p => p.id === item.id) || PlaceHolderImages[0];
             return (
-              <Card key={i} className="overflow-hidden glass-card group border-white/5 relative scanline">
+              <Card key={i} className="overflow-hidden glass-card group border-white/5 relative scanline hover:scale-[1.02] transition-transform duration-500">
                 <div className="aspect-square relative overflow-hidden bg-muted/20">
                   <Image 
                     src={img.imageUrl} 
                     alt={item.title} 
                     fill 
-                    className="object-contain p-8 group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" 
+                    className="object-contain p-8 group-hover:scale-110 transition-transform duration-700" 
                     data-ai-hint={img.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
