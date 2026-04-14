@@ -75,7 +75,7 @@
     {
       "id": "ws-ops-mgmt",
       "description": "Operational management workshop",
-      "imageUrl": "https://picsum.photos/seed/logistics-mgmt/600/400",
+      "imageUrl": "/ops.png",
       "imageHint": "operations management"
     },
     {
