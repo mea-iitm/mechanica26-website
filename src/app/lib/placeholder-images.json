@@ -64,7 +64,7 @@
     {
       "id": "event-ideathon",
       "description": "Engineering ideathon session",
-      "imageUrl": "https://picsum.photos/seed/ideathon/600/400",
+      "imageUrl": "/idea.png",
       "imageHint": "brainstorming ideas"
     },
     {
