@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { User } from "lucide-react";
 
 const secretaries = [
-  { name: "Goutham Boyilla", role: "Secretary" },
+  { name: "Gowtham Boyilla", role: "Secretary" },
   { name: "Harsha Vardhan", role: "Secretary" },
 ];
 
@@ -18,7 +18,7 @@ const cores = [
   { dept: "Sponsorship", members: ["Manoj Preetham", "Mukesh", "Chandrasekhar Naidu"] },
   { dept: "Media & Design", members: ["Vivek", "Preetham"] },
   { dept: "Facilities & Requirements", members: ["Yaswanth Mani", "Thomas"] },
-  { dept: "Student Relations", members: ["Yaswanth", "Poojith", "Goutham"] },
+  { dept: "Student Relations", members: ["Yaswanth", "Poojith", "Gowtham"] },
   { dept: "Alumni Relations & Outreach", members: ["Laxmi Prasana", "Nikhita"] },
 ];
 

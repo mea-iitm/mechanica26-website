@@ -48,7 +48,7 @@ export function Footer() {
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-foreground">Goutham:</span>
+                    <span className="text-foreground">Gowtham:</span>
                     <Link href="tel:+916281545976" className="hover:text-primary transition-colors flex items-center gap-1">
                       <Phone className="h-3 w-3" /> 6281545976
                     </Link>
