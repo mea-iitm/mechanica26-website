@@ -94,7 +94,7 @@
     {
       "id": "ws-nextgen-robotics",
       "description": "Next Gen Robotics workshop",
-      "imageUrl": "https://picsum.photos/seed/future-robot/600/400",
+      "imageUrl": "/robot.png",
       "imageHint": "advanced robot"
     },
     {
