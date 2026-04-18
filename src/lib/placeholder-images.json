@@ -105,7 +105,7 @@
     {
       "id": "ws-ev-battery",
       "description": "EV Battery workshop",
-      "imageUrl": "https://picsum.photos/seed/ev-battery/600/400",
+      "imageUrl": "/EV.png",
       "imageHint": "electric battery"
     },
     {
