@@ -99,7 +99,7 @@
     {
       "id": "ws-autofusion",
       "description": "Auto fusion & Ansys workshop",
-      "imageUrl": "https://picsum.photos/seed/simulation-ansys/600/400",
+      "imageUrl": "/Ansys.png",
       "imageHint": "engineering simulation"
     },
     {
