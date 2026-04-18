@@ -111,9 +111,9 @@
     },
     {
       "id": "ws-gen-ai",
-      "description": "Gen AI workshop",
-      "imageUrl": "https://picsum.photos/seed/ai-brain/600/400",
-      "imageHint": "artificial intelligence"
+      "description": "Gen and Agentic AI workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "purple ai"
     },
     {
       "id": "ws-ros",
