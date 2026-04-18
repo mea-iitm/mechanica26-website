@@ -87,7 +87,7 @@
     {
       "id": "ws-drones",
       "description": "Drone technology workshop",
-      "imageUrl": "https://picsum.photos/seed/drone-tech/600/400",
+      "imageUrl": "/Drone.png",
       "imageHint": "drone flight"
     },
     {

@@ -34,7 +34,7 @@
     {
       "id": "event-cad",
       "description": "CAD design competition",
-      "imageUrl": "/cad.jpg",
+      "imageUrl": "/CAD.png",
       "imageHint": "cad design"
     },
     {
@@ -70,25 +70,25 @@
     {
       "id": "ws-automation",
       "description": "Automation workshop",
-      "imageUrl": "https://picsum.photos/seed/automation-industry/600/400",
+      "imageUrl": "/Auto.png",
       "imageHint": "industrial automation"
     },
     {
       "id": "ws-ops-mgmt",
       "description": "Operational management workshop",
-      "imageUrl": "https://picsum.photos/seed/logistics-mgmt/600/400",
+      "imageUrl": "/ops.png",
       "imageHint": "operations management"
     },
     {
       "id": "ws-ic-engines",
       "description": "IC Engines workshop",
-      "imageUrl": "https://picsum.photos/seed/engine-piston/600/400",
+      "imageUrl": "/IC.png",
       "imageHint": "car engine"
     },
     {
       "id": "ws-drones",
       "description": "Drone technology workshop",
-      "imageUrl": "https://picsum.photos/seed/drone-tech/600/400",
+      "imageUrl": "/Drone.png",
       "imageHint": "drone flight"
     },
     {
