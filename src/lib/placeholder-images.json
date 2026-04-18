@@ -81,7 +81,7 @@
     {
       "id": "ws-ic-engines",
       "description": "IC Engines workshop",
-      "imageUrl": "https://picsum.photos/seed/engine-piston/600/400",
+      "imageUrl": "/IC.png",
       "imageHint": "car engine"
     },
     {
