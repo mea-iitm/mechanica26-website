@@ -130,7 +130,7 @@
     {
       "id": "ws-cybersecurity",
       "description": "Cyber security workshop",
-      "imageUrl": "https://picsum.photos/seed/security-shield/600/400",
+      "imageUrl": "/Cysec.png",
       "imageHint": "cyber security"
     },
     {
