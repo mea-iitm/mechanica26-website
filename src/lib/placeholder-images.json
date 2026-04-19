@@ -117,7 +117,7 @@
     {
       "id": "ws-ros",
       "description": "ROS workshop",
-      "imageUrl": "https://picsum.photos/seed/ros-code/600/400",
+      "imageUrl": "/ROS.png",
       "imageHint": "robotics software"
     },
     {
