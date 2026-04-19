@@ -136,7 +136,7 @@
     {
       "id": "ws-iot",
       "description": "IOT workshop",
-      "imageUrl": "https://picsum.photos/seed/iot-chip/600/400",
+      "imageUrl": "/IOT.png",
       "imageHint": "internet things"
     },
     {
