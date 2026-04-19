@@ -110,8 +110,8 @@
     },
     {
       "id": "ws-gen-ai",
-      "description": "Gen AI workshop",
-      "imageUrl": "https://picsum.photos/seed/ai-brain/600/400",
+      "description": "Gen and Agentic AI workshop",
+      "imageUrl": "/AI.png",
       "imageHint": "artificial intelligence"
     },
     {
