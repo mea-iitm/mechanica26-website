@@ -7,9 +7,9 @@ import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin, Phone } from "luc
 export function Footer() {
   const socialLinks = [
     { Icon: Instagram, href: "https://www.instagram.com/mea_iitm?igsh=MWx3Y3h0djYxa2lrbg==" },
-    { Icon: Youtube, href: "https://www.youtube.com/@MEAIITMadras" },
+    { Icon: Youtube, href: "https://youtube.com/@mechanicaiitm?si=Wb8HPXRwAqmSN1AK" },
     { Icon: Facebook, href: "https://www.facebook.com/meaiitm/" },
-    { Icon: Linkedin, href: "https://www.linkedin.com/company/mea-iitm/" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/company/meaiitm/" },
   ];
 
   return (
