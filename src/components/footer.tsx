@@ -5,6 +5,13 @@ import Image from "next/image";
 import { Instagram, Youtube, Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
+  const socialLinks = [
+    { Icon: Instagram, href: "https://www.instagram.com/mea_iitm?igsh=MWx3Y3h0djYxa2lrbg==" },
+    { Icon: Youtube, href: "https://www.youtube.com/@MEAIITMadras" },
+    { Icon: Facebook, href: "https://www.facebook.com/meaiitm/" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/company/mea-iitm/" },
+  ];
+
   return (
     <footer className="bg-card/30 border-t border-white/5 mt-20 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
@@ -30,8 +37,14 @@ export function Footer() {
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                {[Instagram, Youtube, Facebook, Linkedin].map((Icon, i) => (
-                  <Link key={i} href="#" className="p-2 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                {socialLinks.map(({ Icon, href }, i) => (
+                  <Link 
+                    key={i} 
+                    href={href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 bg-secondary/50 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  >
                     <Icon className="h-5 w-5" />
                   </Link>
                 ))}
