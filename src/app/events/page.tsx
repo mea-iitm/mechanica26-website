@@ -52,21 +52,21 @@ const techEvents = [
 ];
 
 const coreWorkshops = [
-  { id: 'ws-automation', title: "Automation in Industry 5.0", desc: "Master human-robot collaboration. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-ops-mgmt', title: "Operational Management", desc: "Optimization strategies for manufacturing. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-ic-engines', title: "IC Engines", desc: "Deep dive into engine mechanics. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-drones', title: "Drone Technology", desc: "Design and dynamics of modern UAVs. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-nextgen-robotics', title: "Next Gen Robotics", desc: "Advanced kinematics and sensor integration. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-autofusion', title: "Auto fusion and Ansys", desc: "High-fidelity simulation and generative design. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-ev-battery', title: "Battery, Powertrain in EVs", desc: "Energy storage solutions for electric mobility. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-automation', title: "Automation in Industry 5.0", desc: "Master human-robot collaboration. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ops-mgmt', title: "Operational Management", desc: "Optimization strategies for manufacturing. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ic-engines', title: "IC Engines", desc: "Deep dive into engine mechanics. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-drones', title: "Drone Technology", desc: "Design and dynamics of modern UAVs. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-nextgen-robotics', title: "Next Gen Robotics", desc: "Advanced kinematics and sensor integration. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-autofusion', title: "Auto fusion and Ansys", desc: "High-fidelity simulation and generative design. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ev-battery', title: "Battery, Powertrain in EVs", desc: "Energy storage solutions for electric mobility. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
 ];
 
 const nonCoreWorkshops = [
-  { id: 'ws-gen-ai', title: "Gen and Agentic AI", desc: "Harnessing LLMs for engineering. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-ros', title: "ROS (Robot Operating System)", desc: "Software frameworks for robot applications. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-ai-film', title: "AI in Film Making", desc: "Generative tools for creative media. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-cybersecurity', title: "Cyber Security", desc: "Protecting industrial control systems. (9 AM-12 PM & 2 PM-5 PM)" },
-  { id: 'ws-iot', title: "IOT (Internet of Things)", desc: "Connecting sensors for real-time monitoring. (9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-gen-ai', title: "Gen and Agentic AI", desc: "Harnessing LLMs for engineering. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ros', title: "ROS (Robot Operating System)", desc: "Software frameworks for robot applications. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-ai-film', title: "AI in Film Making", desc: "Generative tools for creative media. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-cybersecurity', title: "Cyber Security", desc: "Protecting industrial control systems. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
+  { id: 'ws-iot', title: "IOT (Internet of Things)", desc: "Connecting sensors for real-time monitoring. (May 30-31 | 9 AM-12 PM & 2 PM-5 PM)" },
 ];
 
 export default function EventsPage() {
@@ -106,7 +106,7 @@ export default function EventsPage() {
           Events & <span className="text-primary">Workshops</span>
         </h1>
         <p className="text-muted-foreground text-lg">
-          Compete with the best minds or learn from the experts in our curated sessions.
+          Compete with the best minds or learn from the experts in our curated sessions from May 29 to May 31.
         </p>
       </section>
 
