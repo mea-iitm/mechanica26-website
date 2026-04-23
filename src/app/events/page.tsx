@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -13,7 +12,7 @@ const techEvents = [
   { 
     id: 'event-quiz', 
     title: "Technical Quizzes", 
-    date: "April 25, 2026 (9 AM onwards)", 
+    date: "May 30, 2026 (9 AM onwards)", 
     participants: "Individual", 
     desc: "Test your mental mettle in Math (9 AM), Mechanical Engineering (10 AM), and General Knowledge (11 AM). Fast-paced and challenging.",
     icon: HelpCircle
@@ -21,7 +20,7 @@ const techEvents = [
   { 
     id: 'event-paper', 
     title: "Paper Presentation", 
-    date: "April 25, 2026 (2 PM)", 
+    date: "May 30, 2026 (2 PM)", 
     participants: "1-2 members", 
     desc: "A platform to showcase original research and technical innovations. Present your findings to a panel of distinguished experts.",
     icon: FileText
@@ -29,7 +28,7 @@ const techEvents = [
   { 
     id: 'event-casestudy', 
     title: "Case Study", 
-    date: "April 25, 2026 (3:30 PM)", 
+    date: "May 30, 2026 (3:30 PM)", 
     participants: "2-3 members", 
     desc: "Analyze and resolve real-world industrial dilemmas. Apply your engineering knowledge to propose viable, efficient solutions.",
     icon: Lightbulb
@@ -37,7 +36,7 @@ const techEvents = [
   { 
     id: 'event-ideathon', 
     title: "Ideathon", 
-    date: "April 25, 2026 (7 PM)", 
+    date: "May 30, 2026 (7 PM)", 
     participants: "3-5 members", 
     desc: "A high-intensity brainstorming session to solve modern engineering challenges with creative and sustainable ideas.",
     icon: Zap
@@ -45,7 +44,7 @@ const techEvents = [
   { 
     id: 'event-cad', 
     title: "CAD Design Competition", 
-    date: "April 26, 2026 (10 AM)", 
+    date: "May 31, 2026 (10 AM)", 
     participants: "Individual", 
     desc: "Master the art of digital drafting and 3D modeling to solve complex industrial design challenges using industry-standard tools.",
     icon: Settings

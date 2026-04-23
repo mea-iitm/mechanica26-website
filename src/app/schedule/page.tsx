@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +7,7 @@ const scheduleData = [
   {
     id: "day0",
     day: "Day 00",
-    date: "April 24, 2026",
+    date: "May 29, 2026",
     events: [
       { time: "03:00 PM", title: "Inauguration", loc: "MSB", type: "Official", desc: "The formal inauguration ceremony of Mechanica 2026 at the Mechanical Sciences Block." },
       { time: "05:00 PM", title: "Campus Tour", loc: "MSB", type: "Social", desc: "A guided exploration of the iconic IIT Madras campus, starting from MSB." },
@@ -17,7 +16,7 @@ const scheduleData = [
   {
     id: "day1",
     day: "Day 01",
-    date: "April 25, 2026",
+    date: "May 30, 2026",
     events: [
       { time: "09:00 AM", title: "Math Quiz", loc: "MSB", type: "Quiz", desc: "Test your mathematical aptitude in this fast-paced competition." },
       { time: "09:00 AM - 12:00 PM", title: "Workshops (Session 1)", loc: "Various Dept Labs", type: "Workshop", desc: "Core and Non-Core workshop sessions for pre-registered participants." },
@@ -32,7 +31,7 @@ const scheduleData = [
   {
     id: "day2",
     day: "Day 02",
-    date: "April 26, 2026",
+    date: "May 31, 2026",
     events: [
       { time: "09:00 AM - 12:00 PM", title: "Workshops (Session 3)", loc: "Various Dept Labs", type: "Workshop", desc: "Final morning session for workshops." },
       { time: "10:00 AM", title: "CAD Design Competition", loc: "Design Hall", type: "Tech", desc: "The flagship digital drafting and 3D modeling showdown." },
@@ -97,7 +96,7 @@ export default function SchedulePage() {
 
                       {/* Content Area */}
                       <div className="flex-1 p-6 space-y-4">
-                        <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div className="flex wrap items-start justify-between gap-4">
                           <div className="space-y-1">
                             <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{event.title}</h3>
                             <div className="flex items-center text-sm text-muted-foreground">
